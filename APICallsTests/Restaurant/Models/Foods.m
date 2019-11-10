@@ -10,4 +10,16 @@
 
 @implementation Foods
 
+- (id) restaurantId:(NSString *)restaurantId {
+    if (self) {
+        self.restaurantId = restaurantId;
+    }
+    return self;
+}
+
++ (instancetype)restaurantId:(NSString *)restaurantId{
+    Foods *restaurant = [[Foods alloc] restaurantId:restaurantId];
+    return restaurant;
+}
+
 @end

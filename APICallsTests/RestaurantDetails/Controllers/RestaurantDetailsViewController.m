@@ -16,17 +16,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.restaurantDetailsView = (RestaurantDetailsView *)[[[NSBundle mainBundle] loadNibNamed:@"RestaurantDetailsView" owner:self options:nil] objectAtIndex:0];
+    self.restaurantDetailsView.frame = self.view.bounds;
+    self.restaurantDetailsView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin |
+    UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+    [self.view addSubview:self.restaurantDetailsView];
+    self.navigationItem.title = @"Restaurant";
+    [self getRestaurantDetails];
 }
 
-/*
-#pragma mark - Navigation
+- (void)getRestaurantDetails {self.restaurantDetailsView.restaurantNameLabel.text = self.restaurant.restaurantName;
+    self.restaurantDetailsView.restaurantCuisineLabel.text = self.restaurant.restaurantCuisines;
+    self.restaurantDetailsView.restaurantRatingLabel.text = [NSString stringWithFormat:@"%.02f", self.restaurant.restaurantUserRating];
+    self.restaurantDetailsView.restaurantAddressLabel.text = self.restaurant.restaurantAddress;
+    self.restaurantDetailsView.restaurantTimingLabel.text = self.restaurant.restaurantTiming;
+    self.restaurantDetailsView.foodCostLabel.text = [NSString stringWithFormat:@"%.02f", self.restaurant.restaurantAverageCostForTwo];
+    NSLog(@"%@",self.restaurant.restaurantReviews);
+    NSArray  *data = [self.restaurant.restaurantThumb componentsSeparatedByString:@"?"];
+    for(NSString* str in data)
+    {
+        if([NSURLConnection canHandleRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]]) {
+            NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: str]];
+            self.restaurantDetailsView.restaurantImage.image = [UIImage imageWithData: imageData];
+        }
+    }
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
 
 @end

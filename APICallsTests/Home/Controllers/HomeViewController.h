@@ -7,11 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "../Views/HomeView.h"
+#import <AFNetworking/AFNetworking.h>
+#import "../Models/Categories.h"
+#import "../Views/Cell/HomeTableViewCell.h"
+#import "../../Restaurant/Controllers/RestaurantViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
+@property (strong,nonatomic) HomeView *homeView;
+@property (strong, readwrite) NSMutableArray *categories;
+@property (strong, nonatomic) NSString *categoryId;
+
+- (void) getCategories;
 @end
 
 NS_ASSUME_NONNULL_END
+

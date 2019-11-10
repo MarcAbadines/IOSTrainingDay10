@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "../Views/RestaurantDetailsView.h"
+#import "../../Restaurant/Models/Foods.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RestaurantDetailsViewController : UIViewController
+
+@property (strong, nonatomic) RestaurantDetailsView *restaurantDetailsView;
+@property (strong, readwrite) Foods *restaurant;
 
 @end
 

@@ -11,6 +11,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RestaurantDetailsView : UIView
+@property (weak, nonatomic) IBOutlet UIImageView *restaurantImage;
+@property (weak, nonatomic) IBOutlet UILabel *restaurantNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *restaurantCuisineLabel;
+@property (weak, nonatomic) IBOutlet UILabel *restaurantTimingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *foodCostLabel;
+@property (weak, nonatomic) IBOutlet UILabel *restaurantRatingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *restaurantAddressLabel;
 
 @end
 

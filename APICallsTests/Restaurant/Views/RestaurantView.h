@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RestaurantView : UIView
+@property (weak, nonatomic) IBOutlet UICollectionView *restaurantCollectionView;
+@property (weak, nonatomic) IBOutlet UILabel *restaurantTitle;
 
 @end
 

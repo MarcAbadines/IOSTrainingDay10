@@ -3,18 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08254417991FAE024B01DE94 /* Pods_APICallsTestsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DBF26224084A0054FC2CF8 /* Pods_APICallsTestsTests.framework */; };
+		363C63D5018470B4585EAFDB /* Pods_APICallsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB5E1672AA09E006305B4E1 /* Pods_APICallsTests.framework */; };
 		5B0ADB2523751581008FAD9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0ADB2423751581008FAD9E /* AppDelegate.m */; };
-		5B0ADB2823751581008FAD9E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0ADB2723751581008FAD9E /* ViewController.m */; };
 		5B0ADB2B23751581008FAD9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0ADB2923751581008FAD9E /* Main.storyboard */; };
 		5B0ADB2D23751582008FAD9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B0ADB2C23751582008FAD9E /* Assets.xcassets */; };
 		5B0ADB3023751582008FAD9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0ADB2E23751582008FAD9E /* LaunchScreen.storyboard */; };
 		5B0ADB3323751582008FAD9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0ADB3223751582008FAD9E /* main.m */; };
 		5B0ADB3D23751582008FAD9E /* APICallsTestsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0ADB3C23751582008FAD9E /* APICallsTestsTests.m */; };
 		5B0ADB4823751582008FAD9E /* APICallsTestsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0ADB4723751582008FAD9E /* APICallsTestsUITests.m */; };
+		5B5A1864237518E10049529D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A1863237518E10049529D /* HomeViewController.m */; };
+		5B5A1866237518EE0049529D /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5A1865237518EE0049529D /* HomeView.xib */; };
+		5B5A1869237519060049529D /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A1868237519060049529D /* HomeView.m */; };
+		5B5A186D23751B110049529D /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A186C23751B110049529D /* HomeTableViewCell.m */; };
+		5B5A186F23751B260049529D /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5A186E23751B260049529D /* HomeTableViewCell.xib */; };
+		5B5A18722375318F0049529D /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A18712375318F0049529D /* Categories.m */; };
+		5B7AB27B2377004F00DCC01F /* RestaurantCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B7AB27A2377004F00DCC01F /* RestaurantCollectionViewCell.m */; };
+		5B7AB27D2377006500DCC01F /* RestaurantCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B7AB27C2377006500DCC01F /* RestaurantCollectionViewCell.xib */; };
+		5B8B97512377E1E200A5C910 /* RestaurantDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B97502377E1E200A5C910 /* RestaurantDetailsViewController.m */; };
+		5B8B975D2377E9E400A5C910 /* RestaurantDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8B975C2377E9E400A5C910 /* RestaurantDetailsView.m */; };
+		5B8B975F2377EA1400A5C910 /* RestaurantDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B975E2377EA1400A5C910 /* RestaurantDetailsView.xib */; };
+		5BD8E0F02376D222006F83B8 /* Foods.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8E0EF2376D222006F83B8 /* Foods.m */; };
+		5BD8E0F32376D242006F83B8 /* RestaurantView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8E0F22376D242006F83B8 /* RestaurantView.m */; };
+		5BD8E0F82376D26B006F83B8 /* RestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8E0F72376D26B006F83B8 /* RestaurantViewController.m */; };
+		5BF45A132376E64F0041CADB /* RestaurantView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BF45A122376E64F0041CADB /* RestaurantView.xib */; };
+		C353A7E83F9BE29D10337F84 /* Pods_APICallsTests_APICallsTestsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF396594A21E851A249FF3E /* Pods_APICallsTests_APICallsTestsUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +52,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20506F960F7380F794189D2A /* Pods-APICallsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APICallsTests.release.xcconfig"; path = "Target Support Files/Pods-APICallsTests/Pods-APICallsTests.release.xcconfig"; sourceTree = "<group>"; };
+		29DBF26224084A0054FC2CF8 /* Pods_APICallsTestsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APICallsTestsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E926567482D95E15E5EE90F /* Pods-APICallsTestsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APICallsTestsTests.release.xcconfig"; path = "Target Support Files/Pods-APICallsTestsTests/Pods-APICallsTestsTests.release.xcconfig"; sourceTree = "<group>"; };
+		574B91A147C64C72B428C8E4 /* Pods-APICallsTests-APICallsTestsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APICallsTests-APICallsTestsUITests.debug.xcconfig"; path = "Target Support Files/Pods-APICallsTests-APICallsTestsUITests/Pods-APICallsTests-APICallsTestsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B0ADB2023751581008FAD9E /* APICallsTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APICallsTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0ADB2323751581008FAD9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B0ADB2423751581008FAD9E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5B0ADB2623751581008FAD9E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5B0ADB2723751581008FAD9E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5B0ADB2A23751581008FAD9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B0ADB2C23751582008FAD9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B0ADB2F23751582008FAD9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +70,36 @@
 		5B0ADB4323751582008FAD9E /* APICallsTestsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APICallsTestsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0ADB4723751582008FAD9E /* APICallsTestsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APICallsTestsUITests.m; sourceTree = "<group>"; };
 		5B0ADB4923751582008FAD9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B5A1862237518E10049529D /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		5B5A1863237518E10049529D /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		5B5A1865237518EE0049529D /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		5B5A1867237519060049529D /* HomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeView.h; sourceTree = "<group>"; };
+		5B5A1868237519060049529D /* HomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeView.m; sourceTree = "<group>"; };
+		5B5A186B23751B110049529D /* HomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
+		5B5A186C23751B110049529D /* HomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
+		5B5A186E23751B260049529D /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		5B5A18702375318F0049529D /* Categories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		5B5A18712375318F0049529D /* Categories.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
+		5B7AB2792377004F00DCC01F /* RestaurantCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestaurantCollectionViewCell.h; sourceTree = "<group>"; };
+		5B7AB27A2377004F00DCC01F /* RestaurantCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestaurantCollectionViewCell.m; sourceTree = "<group>"; };
+		5B7AB27C2377006500DCC01F /* RestaurantCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCollectionViewCell.xib; sourceTree = "<group>"; };
+		5B8B974F2377E1E200A5C910 /* RestaurantDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestaurantDetailsViewController.h; sourceTree = "<group>"; };
+		5B8B97502377E1E200A5C910 /* RestaurantDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestaurantDetailsViewController.m; sourceTree = "<group>"; };
+		5B8B975B2377E9E400A5C910 /* RestaurantDetailsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestaurantDetailsView.h; sourceTree = "<group>"; };
+		5B8B975C2377E9E400A5C910 /* RestaurantDetailsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestaurantDetailsView.m; sourceTree = "<group>"; };
+		5B8B975E2377EA1400A5C910 /* RestaurantDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantDetailsView.xib; sourceTree = "<group>"; };
+		5BD8E0EE2376D222006F83B8 /* Foods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Foods.h; sourceTree = "<group>"; };
+		5BD8E0EF2376D222006F83B8 /* Foods.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Foods.m; sourceTree = "<group>"; };
+		5BD8E0F12376D242006F83B8 /* RestaurantView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestaurantView.h; sourceTree = "<group>"; };
+		5BD8E0F22376D242006F83B8 /* RestaurantView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestaurantView.m; sourceTree = "<group>"; };
+		5BD8E0F62376D26B006F83B8 /* RestaurantViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestaurantViewController.h; sourceTree = "<group>"; };
+		5BD8E0F72376D26B006F83B8 /* RestaurantViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestaurantViewController.m; sourceTree = "<group>"; };
+		5BF45A122376E64F0041CADB /* RestaurantView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantView.xib; sourceTree = "<group>"; };
+		7FB5E1672AA09E006305B4E1 /* Pods_APICallsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APICallsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFF396594A21E851A249FF3E /* Pods_APICallsTests_APICallsTestsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APICallsTests_APICallsTestsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAF8EE1E81EBE387571F8007 /* Pods-APICallsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APICallsTests.debug.xcconfig"; path = "Target Support Files/Pods-APICallsTests/Pods-APICallsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F8E3EC486ACFAC89785C2B9D /* Pods-APICallsTests-APICallsTestsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APICallsTests-APICallsTestsUITests.release.xcconfig"; path = "Target Support Files/Pods-APICallsTests-APICallsTestsUITests/Pods-APICallsTests-APICallsTestsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FF94443017E2DAF0DC6757DF /* Pods-APICallsTestsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APICallsTestsTests.debug.xcconfig"; path = "Target Support Files/Pods-APICallsTestsTests/Pods-APICallsTestsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				363C63D5018470B4585EAFDB /* Pods_APICallsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08254417991FAE024B01DE94 /* Pods_APICallsTestsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +123,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C353A7E83F9BE29D10337F84 /* Pods_APICallsTests_APICallsTestsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E36E6DF1CBAED5DBE7B2170 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FB5E1672AA09E006305B4E1 /* Pods_APICallsTests.framework */,
+				AFF396594A21E851A249FF3E /* Pods_APICallsTests_APICallsTestsUITests.framework */,
+				29DBF26224084A0054FC2CF8 /* Pods_APICallsTestsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5B0ADB1723751581008FAD9E = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +147,8 @@
 				5B0ADB3B23751582008FAD9E /* APICallsTestsTests */,
 				5B0ADB4623751582008FAD9E /* APICallsTestsUITests */,
 				5B0ADB2123751581008FAD9E /* Products */,
+				E65E15C74F1ED69C438CE6DB /* Pods */,
+				3E36E6DF1CBAED5DBE7B2170 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +165,11 @@
 		5B0ADB2223751581008FAD9E /* APICallsTests */ = {
 			isa = PBXGroup;
 			children = (
+				5B8B974B2377E08800A5C910 /* RestaurantDetails */,
+				5BD8E0EA23767D01006F83B8 /* Restaurant */,
+				5B5A185C2375187B0049529D /* Home */,
 				5B0ADB2323751581008FAD9E /* AppDelegate.h */,
 				5B0ADB2423751581008FAD9E /* AppDelegate.m */,
-				5B0ADB2623751581008FAD9E /* ViewController.h */,
-				5B0ADB2723751581008FAD9E /* ViewController.m */,
 				5B0ADB2923751581008FAD9E /* Main.storyboard */,
 				5B0ADB2C23751582008FAD9E /* Assets.xcassets */,
 				5B0ADB2E23751582008FAD9E /* LaunchScreen.storyboard */,
@@ -132,6 +197,145 @@
 			path = APICallsTestsUITests;
 			sourceTree = "<group>";
 		};
+		5B5A185C2375187B0049529D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5B5A185D237518850049529D /* Models */,
+				5B5A185E237518920049529D /* Views */,
+				5B5A185F237518A10049529D /* Controllers */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5B5A185D237518850049529D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5B5A18702375318F0049529D /* Categories.h */,
+				5B5A18712375318F0049529D /* Categories.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5B5A185E237518920049529D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B5A186A23751A4E0049529D /* Cell */,
+				5B5A1867237519060049529D /* HomeView.h */,
+				5B5A1868237519060049529D /* HomeView.m */,
+				5B5A1865237518EE0049529D /* HomeView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5B5A185F237518A10049529D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5B5A1862237518E10049529D /* HomeViewController.h */,
+				5B5A1863237518E10049529D /* HomeViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5B5A186A23751A4E0049529D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5B5A186B23751B110049529D /* HomeTableViewCell.h */,
+				5B5A186C23751B110049529D /* HomeTableViewCell.m */,
+				5B5A186E23751B260049529D /* HomeTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5B8B974B2377E08800A5C910 /* RestaurantDetails */ = {
+			isa = PBXGroup;
+			children = (
+				5B8B974D2377E0BD00A5C910 /* Views */,
+				5B8B974C2377E0B300A5C910 /* Controllers */,
+			);
+			path = RestaurantDetails;
+			sourceTree = "<group>";
+		};
+		5B8B974C2377E0B300A5C910 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5B8B974F2377E1E200A5C910 /* RestaurantDetailsViewController.h */,
+				5B8B97502377E1E200A5C910 /* RestaurantDetailsViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5B8B974D2377E0BD00A5C910 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B8B975B2377E9E400A5C910 /* RestaurantDetailsView.h */,
+				5B8B975C2377E9E400A5C910 /* RestaurantDetailsView.m */,
+				5B8B975E2377EA1400A5C910 /* RestaurantDetailsView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BD8E0EA23767D01006F83B8 /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				5BD8E0ED23767D22006F83B8 /* Models */,
+				5BD8E0EC23767D1B006F83B8 /* Views */,
+				5BD8E0EB23767D11006F83B8 /* Controllers */,
+			);
+			path = Restaurant;
+			sourceTree = "<group>";
+		};
+		5BD8E0EB23767D11006F83B8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BD8E0F62376D26B006F83B8 /* RestaurantViewController.h */,
+				5BD8E0F72376D26B006F83B8 /* RestaurantViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5BD8E0EC23767D1B006F83B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BD8E0F92376D270006F83B8 /* Cells */,
+				5BD8E0F12376D242006F83B8 /* RestaurantView.h */,
+				5BD8E0F22376D242006F83B8 /* RestaurantView.m */,
+				5BF45A122376E64F0041CADB /* RestaurantView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BD8E0ED23767D22006F83B8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5BD8E0EE2376D222006F83B8 /* Foods.h */,
+				5BD8E0EF2376D222006F83B8 /* Foods.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5BD8E0F92376D270006F83B8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5B7AB2792377004F00DCC01F /* RestaurantCollectionViewCell.h */,
+				5B7AB27A2377004F00DCC01F /* RestaurantCollectionViewCell.m */,
+				5B7AB27C2377006500DCC01F /* RestaurantCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E65E15C74F1ED69C438CE6DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CAF8EE1E81EBE387571F8007 /* Pods-APICallsTests.debug.xcconfig */,
+				20506F960F7380F794189D2A /* Pods-APICallsTests.release.xcconfig */,
+				574B91A147C64C72B428C8E4 /* Pods-APICallsTests-APICallsTestsUITests.debug.xcconfig */,
+				F8E3EC486ACFAC89785C2B9D /* Pods-APICallsTests-APICallsTestsUITests.release.xcconfig */,
+				FF94443017E2DAF0DC6757DF /* Pods-APICallsTestsTests.debug.xcconfig */,
+				3E926567482D95E15E5EE90F /* Pods-APICallsTestsTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +343,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B0ADB4C23751582008FAD9E /* Build configuration list for PBXNativeTarget "APICallsTests" */;
 			buildPhases = (
+				37DB3F7A91C2ADA1CEB33BF8 /* [CP] Check Pods Manifest.lock */,
 				5B0ADB1C23751581008FAD9E /* Sources */,
 				5B0ADB1D23751581008FAD9E /* Frameworks */,
 				5B0ADB1E23751581008FAD9E /* Resources */,
+				982734637914598C168748B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +362,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B0ADB4F23751582008FAD9E /* Build configuration list for PBXNativeTarget "APICallsTestsTests" */;
 			buildPhases = (
+				FFC7ADBA518A89185964EB49 /* [CP] Check Pods Manifest.lock */,
 				5B0ADB3423751582008FAD9E /* Sources */,
 				5B0ADB3523751582008FAD9E /* Frameworks */,
 				5B0ADB3623751582008FAD9E /* Resources */,
@@ -174,9 +381,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B0ADB5223751582008FAD9E /* Build configuration list for PBXNativeTarget "APICallsTestsUITests" */;
 			buildPhases = (
+				65B1147562460AA4BF7C3F12 /* [CP] Check Pods Manifest.lock */,
 				5B0ADB3F23751582008FAD9E /* Sources */,
 				5B0ADB4023751582008FAD9E /* Frameworks */,
 				5B0ADB4123751582008FAD9E /* Resources */,
+				FB9BAEDA7CC3EFC1821E19C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,8 +445,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B0ADB3023751582008FAD9E /* LaunchScreen.storyboard in Resources */,
+				5B5A1866237518EE0049529D /* HomeView.xib in Resources */,
 				5B0ADB2D23751582008FAD9E /* Assets.xcassets in Resources */,
+				5B5A186F23751B260049529D /* HomeTableViewCell.xib in Resources */,
+				5B8B975F2377EA1400A5C910 /* RestaurantDetailsView.xib in Resources */,
+				5B7AB27D2377006500DCC01F /* RestaurantCollectionViewCell.xib in Resources */,
 				5B0ADB2B23751581008FAD9E /* Main.storyboard in Resources */,
+				5BF45A132376E64F0041CADB /* RestaurantView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,14 +471,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		37DB3F7A91C2ADA1CEB33BF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-APICallsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65B1147562460AA4BF7C3F12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-APICallsTests-APICallsTestsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		982734637914598C168748B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-APICallsTests/Pods-APICallsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-APICallsTests/Pods-APICallsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-APICallsTests/Pods-APICallsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB9BAEDA7CC3EFC1821E19C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-APICallsTests-APICallsTestsUITests/Pods-APICallsTests-APICallsTestsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-APICallsTests-APICallsTestsUITests/Pods-APICallsTests-APICallsTestsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-APICallsTests-APICallsTestsUITests/Pods-APICallsTests-APICallsTestsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFC7ADBA518A89185964EB49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-APICallsTestsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5B0ADB1C23751581008FAD9E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B0ADB2823751581008FAD9E /* ViewController.m in Sources */,
 				5B0ADB3323751582008FAD9E /* main.m in Sources */,
+				5B7AB27B2377004F00DCC01F /* RestaurantCollectionViewCell.m in Sources */,
+				5B5A18722375318F0049529D /* Categories.m in Sources */,
+				5B8B975D2377E9E400A5C910 /* RestaurantDetailsView.m in Sources */,
+				5B8B97512377E1E200A5C910 /* RestaurantDetailsViewController.m in Sources */,
+				5B5A1869237519060049529D /* HomeView.m in Sources */,
+				5BD8E0F82376D26B006F83B8 /* RestaurantViewController.m in Sources */,
+				5BD8E0F02376D222006F83B8 /* Foods.m in Sources */,
+				5B5A186D23751B110049529D /* HomeTableViewCell.m in Sources */,
 				5B0ADB2523751581008FAD9E /* AppDelegate.m in Sources */,
+				5B5A1864237518E10049529D /* HomeViewController.m in Sources */,
+				5BD8E0F32376D242006F83B8 /* RestaurantView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +759,7 @@
 		};
 		5B0ADB4D23751582008FAD9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAF8EE1E81EBE387571F8007 /* Pods-APICallsTests.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +776,7 @@
 		};
 		5B0ADB4E23751582008FAD9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20506F960F7380F794189D2A /* Pods-APICallsTests.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -465,6 +793,7 @@
 		};
 		5B0ADB5023751582008FAD9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF94443017E2DAF0DC6757DF /* Pods-APICallsTestsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -483,6 +812,7 @@
 		};
 		5B0ADB5123751582008FAD9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E926567482D95E15E5EE90F /* Pods-APICallsTestsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -501,6 +831,7 @@
 		};
 		5B0ADB5323751582008FAD9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 574B91A147C64C72B428C8E4 /* Pods-APICallsTests-APICallsTestsUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = APICallsTestsUITests/Info.plist;
@@ -518,6 +849,7 @@
 		};
 		5B0ADB5423751582008FAD9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8E3EC486ACFAC89785C2B9D /* Pods-APICallsTests-APICallsTestsUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = APICallsTestsUITests/Info.plist;

@@ -1,10 +1,54 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="phY-y6-a8c" customClass="RestaurantView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="SOz-GH-MI3">
+                    <rect key="frame" x="20" y="106.5" width="374" height="735.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ll6-uJ-cn8">
+                        <size key="itemSize" width="170" height="206"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C O L L E C T I O N S" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUw-Ro-Kv6">
+                    <rect key="frame" x="20" y="69" width="228" height="21.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="N45-SX-11j" firstAttribute="trailing" secondItem="SOz-GH-MI3" secondAttribute="trailing" constant="20" id="DPA-rO-1Em"/>
+                <constraint firstItem="N45-SX-11j" firstAttribute="trailing" secondItem="OUw-Ro-Kv6" secondAttribute="trailing" constant="166" id="DyX-dg-9oD"/>
+                <constraint firstItem="OUw-Ro-Kv6" firstAttribute="top" secondItem="N45-SX-11j" secondAttribute="top" constant="25" id="X4d-v2-OaQ"/>
+                <constraint firstItem="OUw-Ro-Kv6" firstAttribute="leading" secondItem="N45-SX-11j" secondAttribute="leading" constant="20" id="Y3g-9O-ZIs"/>
+                <constraint firstItem="SOz-GH-MI3" firstAttribute="leading" secondItem="N45-SX-11j" secondAttribute="leading" constant="20" id="ni0-SJ-tr0"/>
+                <constraint firstItem="SOz-GH-MI3" firstAttribute="top" secondItem="OUw-Ro-Kv6" secondAttribute="bottom" constant="16" id="ogQ-QN-odD"/>
+                <constraint firstItem="N45-SX-11j" firstAttribute="bottom" secondItem="SOz-GH-MI3" secondAttribute="bottom" constant="20" id="ymb-eg-fIB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="N45-SX-11j"/>
+            <connections>
+                <outlet property="restaurantCollectionView" destination="SOz-GH-MI3" id="GGL-xX-na5"/>
+                <outlet property="restaurantTitle" destination="OUw-Ro-Kv6" id="Bdc-zQ-Mol"/>
+            </connections>
+            <point key="canvasLocation" x="250.72463768115944" y="-2.0089285714285712"/>
+        </view>
     </objects>
 </document>
