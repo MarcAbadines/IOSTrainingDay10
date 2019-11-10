@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HomeView.h
 //  APICallsTests
 //
 //  Created by OPSolutions on 08/11/2019.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface HomeView : UIView
 
 @end
 
+NS_ASSUME_NONNULL_END
