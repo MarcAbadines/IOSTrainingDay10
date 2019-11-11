@@ -7,6 +7,8 @@ target 'APICallsTests' do
 
   # Pods for APICallsTests
     pod 'AFNetworking', '~> 3.0'
+    pod 'GoogleMaps'
+    pod 'GooglePlaces'
 
   target 'APICallsTestsTests' do
     inherit! :search_paths

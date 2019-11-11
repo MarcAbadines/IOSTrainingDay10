@@ -25,7 +25,8 @@
     [self getRestaurantDetails];
 }
 
-- (void)getRestaurantDetails {self.restaurantDetailsView.restaurantNameLabel.text = self.restaurant.restaurantName;
+- (void)getRestaurantDetails {
+    self.restaurantDetailsView.restaurantNameLabel.text = self.restaurant.restaurantName;
     self.restaurantDetailsView.restaurantCuisineLabel.text = self.restaurant.restaurantCuisines;
     self.restaurantDetailsView.restaurantRatingLabel.text = [NSString stringWithFormat:@"%.02f", self.restaurant.restaurantUserRating];
     self.restaurantDetailsView.restaurantAddressLabel.text = self.restaurant.restaurantAddress;
@@ -33,14 +34,12 @@
     self.restaurantDetailsView.foodCostLabel.text = [NSString stringWithFormat:@"%.02f", self.restaurant.restaurantAverageCostForTwo];
     NSLog(@"%@",self.restaurant.restaurantReviews);
     NSArray  *data = [self.restaurant.restaurantThumb componentsSeparatedByString:@"?"];
-    for(NSString* str in data)
-    {
+    for(NSString* str in data) {
         if([NSURLConnection canHandleRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]]) {
             NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: str]];
             self.restaurantDetailsView.restaurantImage.image = [UIImage imageWithData: imageData];
         }
     }
-
 }
 
 @end

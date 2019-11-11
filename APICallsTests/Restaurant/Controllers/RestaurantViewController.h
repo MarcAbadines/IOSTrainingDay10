@@ -12,6 +12,8 @@
 #import "../Models/Foods.h"
 #import "../Views/Cells/RestaurantCollectionViewCell.h"
 #import "../../RestaurantDetails/Controllers/RestaurantDetailsViewController.h"
+#import "../../Maps/MapLocation/Controllers/MapViewController.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 

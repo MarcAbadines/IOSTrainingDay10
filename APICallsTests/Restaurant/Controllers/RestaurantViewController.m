@@ -57,6 +57,8 @@
             restaurant.restaurantCuisines = responseCategory[@"cuisines"];
             restaurant.restaurantTiming = responseCategory[@"timings"];
             restaurant.restaurantAverageCostForTwo = [responseCategory[@"average_cost_for_two"] floatValue];
+            restaurant.restaurantLatitude= responseCategory[@"latitude"];
+            restaurant.restaurantLongitude= responseCategory[@"longitude"];
             [self.restaurants addObject:restaurant];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -100,6 +102,9 @@
     if ([segue.identifier isEqualToString:@"displayRestaurantIdentifier"]) {
         RestaurantDetailsViewController *restaurantDetailsVc = [segue destinationViewController];
         restaurantDetailsVc.restaurant = self.restaurant;
+    } else if ([segue.identifier isEqualToString:@"continueToMap"]) {
+        MapViewController *mapVc = [segue destinationViewController];
+        mapVc.restaurant = self.restaurant;
     }
 }
 
