@@ -103,8 +103,9 @@
         RestaurantDetailsViewController *restaurantDetailsVc = [segue destinationViewController];
         restaurantDetailsVc.restaurant = self.restaurant;
     } else if ([segue.identifier isEqualToString:@"continueToMap"]) {
-        MapViewController *mapVc = [segue destinationViewController];
-        mapVc.restaurant = self.restaurant;
+        UINavigationController *navVc = [segue destinationViewController];
+        MapViewController *mapVc = navVc.viewControllers[0];
+        mapVc.restaurants = self.restaurants;
     }
 }
 
