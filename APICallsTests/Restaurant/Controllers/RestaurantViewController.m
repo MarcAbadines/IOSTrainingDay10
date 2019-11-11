@@ -28,14 +28,20 @@
 }
 
 - (void) getRestaurants {
-    NSString *categoriesUrl = @"https://developers.zomato.com/api/v2.1/search?category=8&lat=14.219866&lon=121.037037&radius=2000&sort=real_distance";
+    NSString *categoriesUrl = @"https://developers.zomato.com/api/v2.1/search";
     NSString *apiKey = @"0ec904c23c17a2c521c1b83169be3680";
-    
+    NSDictionary *parameters = @{@"category" : _categoryId,
+                                 @"lat" : @"14.219866",
+                                 @"lon" : @"121.037037",
+                                 @"radius" : @"2000",
+                                 @"sort" : @"real_distance"
+                                 };
+ 
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager.requestSerializer setValue:apiKey forHTTPHeaderField:@"user-key"];
-    [manager GET:categoriesUrl parameters:nil progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [manager GET:categoriesUrl parameters:parameters progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         NSDictionary *responseDictionary = responseObject;
         NSArray *responseArray = responseDictionary[@"restaurants"];
         self.restaurants = [[NSMutableArray alloc] init];
