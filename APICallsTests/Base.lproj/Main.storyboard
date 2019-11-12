@@ -65,7 +65,7 @@
         <!--Restaurant Details View Controller-->
         <scene sceneID="h4S-xR-pZ6">
             <objects>
-                <viewController id="BiH-HO-BIf" customClass="RestaurantDetailsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="returnDetails" id="BiH-HO-BIf" customClass="RestaurantDetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="32L-8e-orA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -37,12 +37,27 @@
                         <viewLayoutGuide key="safeArea" id="zIX-TH-HTX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Map View" id="kER-8f-kS6">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="KfF-KY-25R"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="KfF-KY-25R">
+                            <connections>
+                                <action selector="tapBackButton:" destination="29t-ta-S8q" id="3zZ-yA-DC3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="7tg-2q-QaP" kind="show" identifier="returnDetails" id="8eW-Uq-Hfz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gjC-hZ-WZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-117" y="-13"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="rM3-bt-gVk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="7tg-2q-QaP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5c8-xE-7CH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413" y="-13"/>
         </scene>
     </scenes>
 </document>

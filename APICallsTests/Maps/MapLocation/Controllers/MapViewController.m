@@ -8,6 +8,7 @@
 
 #import "MapViewController.h"
 #import "../../../Restaurant/Models/Foods.h"
+#include <UIKit/UIKit.h>
 
 @interface MapViewController ()
 
@@ -15,25 +16,42 @@
 
 @implementation MapViewController
 
+- (IBAction)tapBackButton:(id)sender {
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"Message"
+                                 message:@"Are you sure you want to leave this page?"
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* yesButton = [UIAlertAction
+                                actionWithTitle:@"Yes"
+                                style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * action) {
+                                    [self dismissViewControllerAnimated:YES completion:nil];
+                                }];
+    UIAlertAction* noButton = [UIAlertAction
+                               actionWithTitle:@"No"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action) {
+                               }];
+    [alert addAction:yesButton];
+    [alert addAction:noButton];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+
 const float zoom = 15.0f;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.locationView = (MapView *)[[[NSBundle mainBundle] loadNibNamed:@"MapView" owner:self options:nil] objectAtIndex:0];
+        self.locationView = (MapView *)[[[NSBundle mainBundle] loadNibNamed:@"MapView" owner:self options:nil] objectAtIndex:0];
     self.locationView.frame = self.view.bounds;
-    self.locationView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin |
-    UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
     [self.view addSubview:self.locationView];
-    [self initLocationServices];
-    [self settingUpMap];
-    NSLog(@"%@", self.restaurants);
+    [self createLocationServices];
+    [self setupMap];
 }
 
-- (void)initLocationServices {
+- (void)createLocationServices {
     if (_locationManager == nil) {
         _locationManager = [[CLLocationManager alloc] init];
-        //        _locationManager.delegate = self;
         _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         [_locationManager startUpdatingLocation];
     }
@@ -43,51 +61,44 @@ const float zoom = 15.0f;
     GMSCameraPosition *camera = [GMSMutableCameraPosition cameraWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude zoom:zoom];
     self.locationView.mapView.camera = camera;
 }
-//
-//- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
-//    NSLog(@"%@", error);
-//}
-//
-//- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
-//    CLLocation *clLocation = [locations lastObject];
-//    [self centerToLocation:clLocation];
-//}
 
-- (void)settingUpMap {
-    
+- (void)setupMap {
     CLLocationCoordinate2D restaurantLocation;
-    int count = 0;
-    
+    int counter = 0;
     for (Foods *restaurant in self.restaurants) {
         CLLocationCoordinate2D restoLocation;
         restoLocation.latitude = [restaurant.restaurantLatitude floatValue];
         restoLocation.longitude = [restaurant.restaurantLongitude floatValue];
-        if (count == 0) {
+        if (counter == 0) {
             restaurantLocation = restoLocation;
             CLLocation *location = [[CLLocation alloc] initWithLatitude:restaurantLocation.latitude longitude:restaurantLocation.longitude];
             [self centerToLocation:location];
         }
-        
         GMSMarker *marker = [[GMSMarker alloc] init];
         marker.position = restoLocation;
         marker.title = restaurant.restaurantName;
-        marker.snippet = @"Snippet";
+        marker.snippet = @"Restaurant";
         marker.map = self.locationView.mapView;
-        count ++;
+        marker.appearAnimation = kGMSMarkerAnimationPop;
+        marker.tappable = YES;
+        counter++;
     }
-    
-    
-    
     self.locationView.mapView.myLocationEnabled = YES;
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"Error!"
+                                 message:@"Invalid Map Credentials!"
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* okayButton = [UIAlertAction
+                                 actionWithTitle:@"Okay"
+                                 style:UIAlertActionStyleDefault
+                                 handler:^(UIAlertAction * action) {
+                                 }];
+    [alert addAction:okayButton];
+    [self presentViewController:alert animated:YES completion:nil];
 }
-*/
+
 
 @end

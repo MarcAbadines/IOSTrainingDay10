@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) RestaurantDetailsView *restaurantDetailsView;
 @property (strong, readwrite) Foods *restaurant;
+@property (strong, readwrite) NSMutableArray *food;
 
 @end
 

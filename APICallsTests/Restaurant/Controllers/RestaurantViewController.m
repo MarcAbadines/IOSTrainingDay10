@@ -57,8 +57,8 @@
             restaurant.restaurantCuisines = responseCategory[@"cuisines"];
             restaurant.restaurantTiming = responseCategory[@"timings"];
             restaurant.restaurantAverageCostForTwo = [responseCategory[@"average_cost_for_two"] floatValue];
-            restaurant.restaurantLatitude= responseCategory[@"latitude"];
-            restaurant.restaurantLongitude= responseCategory[@"longitude"];
+            restaurant.restaurantLatitude= location[@"latitude"];
+            restaurant.restaurantLongitude= location[@"longitude"];
             [self.restaurants addObject:restaurant];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
