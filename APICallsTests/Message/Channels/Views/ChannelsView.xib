@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="CqU-kn-fZ8" customClass="ChannelsView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cfP-Cs-uPp">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="cfP-Cs-uPp" firstAttribute="top" secondItem="cbf-ic-ZtW" secondAttribute="top" id="0g3-jf-vZl"/>
+                <constraint firstItem="cbf-ic-ZtW" firstAttribute="bottom" secondItem="cfP-Cs-uPp" secondAttribute="bottom" id="2Rr-dJ-mmb"/>
+                <constraint firstItem="cbf-ic-ZtW" firstAttribute="trailing" secondItem="cfP-Cs-uPp" secondAttribute="trailing" id="Ng2-XZ-SdS"/>
+                <constraint firstItem="cfP-Cs-uPp" firstAttribute="leading" secondItem="cbf-ic-ZtW" secondAttribute="leading" id="ajU-hW-SCr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="cbf-ic-ZtW"/>
+            <connections>
+                <outlet property="channelsTableView" destination="cfP-Cs-uPp" id="2hy-qL-Axo"/>
+            </connections>
+            <point key="canvasLocation" x="221.73913043478262" y="83.705357142857139"/>
+        </view>
+    </objects>
+</document>

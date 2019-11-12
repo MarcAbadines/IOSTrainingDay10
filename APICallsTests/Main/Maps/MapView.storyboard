@@ -14,6 +14,7 @@
         <scene sceneID="0JQ-iM-iVf">
             <objects>
                 <navigationController id="X0d-ph-XrA" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LXf-Xa-TXg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -51,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="-117" y="-13"/>
         </scene>
-        <!--Main-->
+        <!--Home-->
         <scene sceneID="rM3-bt-gVk">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="7tg-2q-QaP" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Home" id="7tg-2q-QaP" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5c8-xE-7CH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="413" y="-13"/>

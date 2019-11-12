@@ -77,11 +77,13 @@
             </objects>
             <point key="canvasLocation" x="2487" y="19"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Restaurant-->
         <scene sceneID="G16-ku-6bL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1jx-KD-qfX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Restaurant" id="bRN-kS-UEK"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lBv-MR-gN8">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

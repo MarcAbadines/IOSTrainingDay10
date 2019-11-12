@@ -100,5 +100,19 @@ const float zoom = 15.0f;
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"returnDetails"]) {
+        UINavigationController *navVc = [segue destinationViewController];
+        RestaurantDetailsViewController *restoVc = navVc.viewControllers[0];
+        restoVc.food = self.restaurants;
+    }
+}
+
+- (BOOL) mapView: (GMSMapView *)mapView didTapMarker:(GMSMarker *)marker {
+    [mapView setSelectedMarker:marker];
+    
+    [self performSegueWithIdentifier:@"returnDetails" sender:nil];
+    return YES;
+}
 
 @end

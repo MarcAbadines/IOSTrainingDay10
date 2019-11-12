@@ -1,0 +1,45 @@
+//
+//  LoginViewController.m
+//  APICallsTests
+//
+//  Created by OPSolutions on 12/11/2019.
+//  Copyright © 2019 OPSolutions. All rights reserved.
+//
+
+#import "LoginViewController.h"
+
+@interface LoginViewController ()
+
+@end
+
+@implementation LoginViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    self.loginView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin |
+    UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+    self.loginView = (LoginView*)[[[NSBundle mainBundle] loadNibNamed:@"LoginView" owner:self options:nil] objectAtIndex:0];
+    self.loginView.frame = self.view.frame;
+    self.loginView.delegate = self;
+    [self.view addSubview:self.loginView];
+}
+
+- (void) didTapSignIn {
+    NSString *usernameText = self.loginView.usernameText.text;
+    [[AppSettings sharedAppDataSettings] setUsername:usernameText];
+    [[FIRAuth auth] signInAnonymouslyWithCompletion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
+        [self performSegueWithIdentifier:@"goToChannels" sender:nil];
+    }];
+}
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

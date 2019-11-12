@@ -10,12 +10,14 @@
 		08254417991FAE024B01DE94 /* Pods_APICallsTestsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DBF26224084A0054FC2CF8 /* Pods_APICallsTestsTests.framework */; };
 		363C63D5018470B4585EAFDB /* Pods_APICallsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB5E1672AA09E006305B4E1 /* Pods_APICallsTests.framework */; };
 		5B0ADB2523751581008FAD9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0ADB2423751581008FAD9E /* AppDelegate.m */; };
-		5B0ADB2B23751581008FAD9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0ADB2923751581008FAD9E /* Main.storyboard */; };
+		5B0ADB2B23751581008FAD9E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0ADB2923751581008FAD9E /* Home.storyboard */; };
 		5B0ADB2D23751582008FAD9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B0ADB2C23751582008FAD9E /* Assets.xcassets */; };
 		5B0ADB3023751582008FAD9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0ADB2E23751582008FAD9E /* LaunchScreen.storyboard */; };
 		5B0ADB3323751582008FAD9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0ADB3223751582008FAD9E /* main.m */; };
 		5B0ADB3D23751582008FAD9E /* APICallsTestsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0ADB3C23751582008FAD9E /* APICallsTestsTests.m */; };
 		5B0ADB4823751582008FAD9E /* APICallsTestsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0ADB4723751582008FAD9E /* APICallsTestsUITests.m */; };
+		5B0C1144237A58D0003B8236 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B0C1143237A58D0003B8236 /* GoogleService-Info.plist */; };
+		5B0C1147237A7840003B8236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0C1146237A7840003B8236 /* Main.storyboard */; };
 		5B5A1864237518E10049529D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A1863237518E10049529D /* HomeViewController.m */; };
 		5B5A1866237518EE0049529D /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5A1865237518EE0049529D /* HomeView.xib */; };
 		5B5A1869237519060049529D /* HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A1868237519060049529D /* HomeView.m */; };
@@ -31,6 +33,18 @@
 		5B8DA63B237944EB00B1A67B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8DA63A237944EB00B1A67B /* MapViewController.m */; };
 		5B8DA63D2379452700B1A67B /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B8DA63C2379452700B1A67B /* MapView.xib */; };
 		5B8DA6402379453F00B1A67B /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8DA63F2379453F00B1A67B /* MapView.m */; };
+		5BAD4E47237A7E07008BE704 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BAD4E46237A7E07008BE704 /* Message.storyboard */; };
+		5BAD4E4B237A7EA4008BE704 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD4E4A237A7EA4008BE704 /* LoginViewController.m */; };
+		5BAD4E4E237A7EB6008BE704 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD4E4D237A7EB6008BE704 /* LoginView.m */; };
+		5BAD4E50237A7EC9008BE704 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BAD4E4F237A7EC9008BE704 /* LoginView.xib */; };
+		5BAD4E53237A7EED008BE704 /* LoginDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD4E52237A7EED008BE704 /* LoginDetails.m */; };
+		5BAD4E5A237A8502008BE704 /* ChannelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD4E59237A8502008BE704 /* ChannelsViewController.m */; };
+		5BAD4E5D237A8534008BE704 /* ChannelsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD4E5C237A8534008BE704 /* ChannelsView.m */; };
+		5BAD4E5F237A8546008BE704 /* ChannelsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BAD4E5E237A8546008BE704 /* ChannelsView.xib */; };
+		5BAD4E62237A8565008BE704 /* ChannelsDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD4E61237A8565008BE704 /* ChannelsDetails.m */; };
+		5BAD4E67237A89F5008BE704 /* ChannelsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD4E66237A89F5008BE704 /* ChannelsTableViewCell.m */; };
+		5BAD4E69237A8A0A008BE704 /* ChannelsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BAD4E68237A8A0A008BE704 /* ChannelsTableViewCell.xib */; };
+		5BAD4E6F237A9393008BE704 /* AppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD4E6E237A9393008BE704 /* AppSettings.m */; };
 		5BD8E0F02376D222006F83B8 /* Foods.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8E0EF2376D222006F83B8 /* Foods.m */; };
 		5BD8E0F32376D242006F83B8 /* RestaurantView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8E0F22376D242006F83B8 /* RestaurantView.m */; };
 		5BD8E0F82376D26B006F83B8 /* RestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8E0F72376D26B006F83B8 /* RestaurantViewController.m */; };
@@ -63,7 +77,7 @@
 		5B0ADB2023751581008FAD9E /* APICallsTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APICallsTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0ADB2323751581008FAD9E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B0ADB2423751581008FAD9E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5B0ADB2A23751581008FAD9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B0ADB2A23751581008FAD9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		5B0ADB2C23751582008FAD9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B0ADB2F23751582008FAD9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B0ADB3123751582008FAD9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,6 +88,9 @@
 		5B0ADB4323751582008FAD9E /* APICallsTestsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APICallsTestsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B0ADB4723751582008FAD9E /* APICallsTestsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APICallsTestsUITests.m; sourceTree = "<group>"; };
 		5B0ADB4923751582008FAD9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B0C1143237A58D0003B8236 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5B0C1145237A603A003B8236 /* APICallsTests.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = APICallsTests.entitlements; sourceTree = "<group>"; };
+		5B0C1146237A7840003B8236 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5B5A1862237518E10049529D /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		5B5A1863237518E10049529D /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		5B5A1865237518EE0049529D /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
@@ -98,6 +115,26 @@
 		5B8DA63C2379452700B1A67B /* MapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
 		5B8DA63E2379453F00B1A67B /* MapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
 		5B8DA63F2379453F00B1A67B /* MapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
+		5BAD4E46237A7E07008BE704 /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
+		5BAD4E49237A7EA4008BE704 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		5BAD4E4A237A7EA4008BE704 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		5BAD4E4C237A7EB6008BE704 /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		5BAD4E4D237A7EB6008BE704 /* LoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		5BAD4E4F237A7EC9008BE704 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		5BAD4E51237A7EED008BE704 /* LoginDetails.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginDetails.h; sourceTree = "<group>"; };
+		5BAD4E52237A7EED008BE704 /* LoginDetails.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginDetails.m; sourceTree = "<group>"; };
+		5BAD4E58237A8502008BE704 /* ChannelsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChannelsViewController.h; sourceTree = "<group>"; };
+		5BAD4E59237A8502008BE704 /* ChannelsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChannelsViewController.m; sourceTree = "<group>"; };
+		5BAD4E5B237A8534008BE704 /* ChannelsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChannelsView.h; sourceTree = "<group>"; };
+		5BAD4E5C237A8534008BE704 /* ChannelsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChannelsView.m; sourceTree = "<group>"; };
+		5BAD4E5E237A8546008BE704 /* ChannelsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelsView.xib; sourceTree = "<group>"; };
+		5BAD4E60237A8565008BE704 /* ChannelsDetails.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChannelsDetails.h; sourceTree = "<group>"; };
+		5BAD4E61237A8565008BE704 /* ChannelsDetails.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChannelsDetails.m; sourceTree = "<group>"; };
+		5BAD4E65237A89F5008BE704 /* ChannelsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChannelsTableViewCell.h; sourceTree = "<group>"; };
+		5BAD4E66237A89F5008BE704 /* ChannelsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChannelsTableViewCell.m; sourceTree = "<group>"; };
+		5BAD4E68237A8A0A008BE704 /* ChannelsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelsTableViewCell.xib; sourceTree = "<group>"; };
+		5BAD4E6E237A9393008BE704 /* AppSettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppSettings.m; sourceTree = "<group>"; };
+		5BAD4E70237A939E008BE704 /* AppSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppSettings.h; sourceTree = "<group>"; };
 		5BD8E0EE2376D222006F83B8 /* Foods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Foods.h; sourceTree = "<group>"; };
 		5BD8E0EF2376D222006F83B8 /* Foods.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Foods.m; sourceTree = "<group>"; };
 		5BD8E0F12376D242006F83B8 /* RestaurantView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestaurantView.h; sourceTree = "<group>"; };
@@ -175,16 +212,17 @@
 		5B0ADB2223751581008FAD9E /* APICallsTests */ = {
 			isa = PBXGroup;
 			children = (
-				5BE2113A23793FFA0011E2D0 /* Maps */,
-				5B8B974B2377E08800A5C910 /* RestaurantDetails */,
-				5BD8E0EA23767D01006F83B8 /* Restaurant */,
-				5B5A185C2375187B0049529D /* Home */,
+				5BAD4E6D237A9369008BE704 /* Utilities */,
+				5BAD4E41237A7CC1008BE704 /* Main */,
+				5BAD4E42237A7D6D008BE704 /* Message */,
 				5B0ADB2323751581008FAD9E /* AppDelegate.h */,
 				5B0ADB2423751581008FAD9E /* AppDelegate.m */,
-				5B0ADB2923751581008FAD9E /* Main.storyboard */,
 				5B0ADB2C23751582008FAD9E /* Assets.xcassets */,
+				5B0C1146237A7840003B8236 /* Main.storyboard */,
+				5B0C1145237A603A003B8236 /* APICallsTests.entitlements */,
 				5B0ADB2E23751582008FAD9E /* LaunchScreen.storyboard */,
 				5B0ADB3123751582008FAD9E /* Info.plist */,
+				5B0C1143237A58D0003B8236 /* GoogleService-Info.plist */,
 				5B0ADB3223751582008FAD9E /* main.m */,
 			);
 			path = APICallsTests;
@@ -319,6 +357,156 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5BAD4E41237A7CC1008BE704 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5B0ADB2923751581008FAD9E /* Home.storyboard */,
+				5BE2113A23793FFA0011E2D0 /* Maps */,
+				5B8B974B2377E08800A5C910 /* RestaurantDetails */,
+				5BD8E0EA23767D01006F83B8 /* Restaurant */,
+				5B5A185C2375187B0049529D /* Home */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5BAD4E42237A7D6D008BE704 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD4E46237A7E07008BE704 /* Message.storyboard */,
+				5BAD4E48237A7E78008BE704 /* Login */,
+				5BAD4E54237A8498008BE704 /* Channels */,
+				5BAD4E63237A864C008BE704 /* Chat */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		5BAD4E43237A7D7F008BE704 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD4E49237A7EA4008BE704 /* LoginViewController.h */,
+				5BAD4E4A237A7EA4008BE704 /* LoginViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5BAD4E44237A7D86008BE704 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD4E4C237A7EB6008BE704 /* LoginView.h */,
+				5BAD4E4D237A7EB6008BE704 /* LoginView.m */,
+				5BAD4E4F237A7EC9008BE704 /* LoginView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BAD4E45237A7D8D008BE704 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD4E51237A7EED008BE704 /* LoginDetails.h */,
+				5BAD4E52237A7EED008BE704 /* LoginDetails.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5BAD4E48237A7E78008BE704 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD4E45237A7D8D008BE704 /* Models */,
+				5BAD4E44237A7D86008BE704 /* Views */,
+				5BAD4E43237A7D7F008BE704 /* Controllers */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5BAD4E54237A8498008BE704 /* Channels */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD4E57237A84D9008BE704 /* Models */,
+				5BAD4E56237A84D1008BE704 /* Views */,
+				5BAD4E55237A84C6008BE704 /* Controllers */,
+			);
+			path = Channels;
+			sourceTree = "<group>";
+		};
+		5BAD4E55237A84C6008BE704 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD4E58237A8502008BE704 /* ChannelsViewController.h */,
+				5BAD4E59237A8502008BE704 /* ChannelsViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5BAD4E56237A84D1008BE704 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD4E64237A88EB008BE704 /* Cells */,
+				5BAD4E5B237A8534008BE704 /* ChannelsView.h */,
+				5BAD4E5C237A8534008BE704 /* ChannelsView.m */,
+				5BAD4E5E237A8546008BE704 /* ChannelsView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BAD4E57237A84D9008BE704 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD4E60237A8565008BE704 /* ChannelsDetails.h */,
+				5BAD4E61237A8565008BE704 /* ChannelsDetails.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5BAD4E63237A864C008BE704 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD4E6C237A8A53008BE704 /* Models */,
+				5BAD4E6B237A8A4B008BE704 /* Views */,
+				5BAD4E6A237A8A44008BE704 /* Controllers */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		5BAD4E64237A88EB008BE704 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD4E65237A89F5008BE704 /* ChannelsTableViewCell.h */,
+				5BAD4E66237A89F5008BE704 /* ChannelsTableViewCell.m */,
+				5BAD4E68237A8A0A008BE704 /* ChannelsTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5BAD4E6A237A8A44008BE704 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5BAD4E6B237A8A4B008BE704 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BAD4E6C237A8A53008BE704 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5BAD4E6D237A9369008BE704 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD4E6E237A9393008BE704 /* AppSettings.m */,
+				5BAD4E70237A939E008BE704 /* AppSettings.h */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		5BD8E0EA23767D01006F83B8 /* Restaurant */ = {
@@ -466,6 +654,11 @@
 				TargetAttributes = {
 					5B0ADB1F23751581008FAD9E = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					5B0ADB3723751582008FAD9E = {
 						CreatedOnToolsVersion = 10.2;
@@ -505,12 +698,18 @@
 				5B0ADB3023751582008FAD9E /* LaunchScreen.storyboard in Resources */,
 				5B5A1866237518EE0049529D /* HomeView.xib in Resources */,
 				5B0ADB2D23751582008FAD9E /* Assets.xcassets in Resources */,
+				5B0C1147237A7840003B8236 /* Main.storyboard in Resources */,
 				5B5A186F23751B260049529D /* HomeTableViewCell.xib in Resources */,
 				5B8B975F2377EA1400A5C910 /* RestaurantDetailsView.xib in Resources */,
 				5B8DA6342379429B00B1A67B /* MapView.storyboard in Resources */,
 				5B7AB27D2377006500DCC01F /* RestaurantCollectionViewCell.xib in Resources */,
-				5B0ADB2B23751581008FAD9E /* Main.storyboard in Resources */,
+				5B0ADB2B23751581008FAD9E /* Home.storyboard in Resources */,
+				5BAD4E69237A8A0A008BE704 /* ChannelsTableViewCell.xib in Resources */,
+				5B0C1144237A58D0003B8236 /* GoogleService-Info.plist in Resources */,
+				5BAD4E50237A7EC9008BE704 /* LoginView.xib in Resources */,
 				5BF45A132376E64F0041CADB /* RestaurantView.xib in Resources */,
+				5BAD4E47237A7E07008BE704 /* Message.storyboard in Resources */,
+				5BAD4E5F237A8546008BE704 /* ChannelsView.xib in Resources */,
 				5B8DA63D2379452700B1A67B /* MapView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -675,18 +874,26 @@
 			files = (
 				5B0ADB3323751582008FAD9E /* main.m in Sources */,
 				5B7AB27B2377004F00DCC01F /* RestaurantCollectionViewCell.m in Sources */,
+				5BAD4E5A237A8502008BE704 /* ChannelsViewController.m in Sources */,
 				5B5A18722375318F0049529D /* Categories.m in Sources */,
 				5B8B975D2377E9E400A5C910 /* RestaurantDetailsView.m in Sources */,
 				5B8B97512377E1E200A5C910 /* RestaurantDetailsViewController.m in Sources */,
+				5BAD4E6F237A9393008BE704 /* AppSettings.m in Sources */,
 				5B5A1869237519060049529D /* HomeView.m in Sources */,
+				5BAD4E53237A7EED008BE704 /* LoginDetails.m in Sources */,
 				5BD8E0F82376D26B006F83B8 /* RestaurantViewController.m in Sources */,
 				5B8DA63B237944EB00B1A67B /* MapViewController.m in Sources */,
 				5BD8E0F02376D222006F83B8 /* Foods.m in Sources */,
 				5B5A186D23751B110049529D /* HomeTableViewCell.m in Sources */,
+				5BAD4E67237A89F5008BE704 /* ChannelsTableViewCell.m in Sources */,
+				5BAD4E4E237A7EB6008BE704 /* LoginView.m in Sources */,
+				5BAD4E5D237A8534008BE704 /* ChannelsView.m in Sources */,
 				5B0ADB2523751581008FAD9E /* AppDelegate.m in Sources */,
 				5B8DA6402379453F00B1A67B /* MapView.m in Sources */,
 				5B5A1864237518E10049529D /* HomeViewController.m in Sources */,
 				5BD8E0F32376D242006F83B8 /* RestaurantView.m in Sources */,
+				5BAD4E62237A8565008BE704 /* ChannelsDetails.m in Sources */,
+				5BAD4E4B237A7EA4008BE704 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,12 +929,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5B0ADB2923751581008FAD9E /* Main.storyboard */ = {
+		5B0ADB2923751581008FAD9E /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5B0ADB2A23751581008FAD9E /* Base */,
 			);
-			name = Main.storyboard;
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 		5B0ADB2E23751582008FAD9E /* LaunchScreen.storyboard */ = {
@@ -858,7 +1065,9 @@
 			baseConfigurationReference = CAF8EE1E81EBE387571F8007 /* Pods-APICallsTests.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = APICallsTests/APICallsTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = APICallsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -875,7 +1084,9 @@
 			baseConfigurationReference = 20506F960F7380F794189D2A /* Pods-APICallsTests.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = APICallsTests/APICallsTests.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = APICallsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
