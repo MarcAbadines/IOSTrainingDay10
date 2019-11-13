@@ -3,34 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>750848383829-ik0gejemjabu6tj63bo2rdlrsbsjk500.apps.googleusercontent.com</string>
+	<string>209178874115-c3c2ab54b88cljav0upnhvblcagr5koq.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.750848383829-ik0gejemjabu6tj63bo2rdlrsbsjk500</string>
+	<string>com.googleusercontent.apps.209178874115-c3c2ab54b88cljav0upnhvblcagr5koq</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDYkP_jMDZMrfp5r-dsSyqRy0ZzPTN4pGk</string>
+	<string>AIzaSyC8zRBzpWvw2CHqcfv8njDPhQKHRDN_w5E</string>
 	<key>GCM_SENDER_ID</key>
-	<string>750848383829</string>
+	<string>209178874115</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>OPS.APICallsTests</string>
+	<string>com.zmjy.NotifTutorial</string>
 	<key>PROJECT_ID</key>
-	<string>iostrainingmapview</string>
+	<string>zmjy-mytutorial</string>
 	<key>STORAGE_BUCKET</key>
-	<string>iostrainingmapview.appspot.com</string>
+	<string>zmjy-mytutorial.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:750848383829:ios:fc6b51af47807e2665addc</string>
+	<string>1:209178874115:ios:701693f6b55e087470d936</string>
 	<key>DATABASE_URL</key>
-	<string>https://iostrainingmapview.firebaseio.com</string>
+	<string>https://zmjy-mytutorial.firebaseio.com</string>
 </dict>
 </plist>

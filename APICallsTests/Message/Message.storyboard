@@ -48,7 +48,7 @@
             </objects>
             <point key="canvasLocation" x="920" y="21"/>
         </scene>
-        <!--Item-->
+        <!--Channels-->
         <scene sceneID="VLb-AB-TeH">
             <objects>
                 <viewController id="qdM-LA-Gjn" customClass="ChannelsViewController" sceneMemberID="viewController">
@@ -59,6 +59,13 @@
                         <viewLayoutGuide key="safeArea" id="Bao-Hj-6q1"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="TdD-XX-izV"/>
+                    <navigationItem key="navigationItem" title="Channels" id="Q5p-n3-VSO">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="4CQ-GS-uXa">
+                            <connections>
+                                <action selector="didTapAddChannels:" destination="qdM-LA-Gjn" id="HVh-qr-uaT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbw-I6-hBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
