@@ -19,10 +19,12 @@
 @end
 
 @implementation ChannelsViewController
+- (IBAction)didTapBackButton:(id)sender {
+      [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.channelView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin |
     UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
     self.channelView = (ChannelsView*)[[[NSBundle mainBundle] loadNibNamed:@"ChannelsView" owner:self options:nil] objectAtIndex:0];
@@ -32,6 +34,7 @@
     self.channelView.channelsTableView.delegate = self;
     self.channelView.channelsTableView.dataSource = self;
     [self.channelView.channelsTableView registerNib:[UINib nibWithNibName:@"ChannelsTableViewCell" bundle:nil] forCellReuseIdentifier:@"displayCell"];
+    self.navigationItem.title = @"Channels";
     self.channelView.frame = self.view.frame;
     [self.view addSubview:self.channelView];
     [self setUp];
@@ -55,17 +58,17 @@
                                    }];
     [alert addAction:saveButton];
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        textField.placeholder = @"Please input a channel name here";
+        textField.placeholder = @"Please input a channel name here:";
     }];
     [alert addAction:cancelButton];
     _alertController = alert;
     [self presentViewController:alert animated:YES completion:nil];
-
 }
 
--(void) didTapSave {
+- (void) didTapSave {
     UITextField *textField = _alertController.textFields[0];
     if (textField == nil) {
+        [self showErrorWith:@"Please input name"];
         return;
     }
     ChannelsViewController *vc = self;
@@ -84,7 +87,7 @@
 
 - (void)showErrorWith:(NSString *)message{
     UIAlertController * alert = [UIAlertController
-                                 alertControllerWithTitle:@"Channels"
+                                 alertControllerWithTitle:@"Channel Message"
                                  message:message
                                  preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* okButton = [UIAlertAction
@@ -110,7 +113,6 @@
             [channelVc handleDocumentChange:change];
         }
     }];
-    
 }
 
 - (void)handleDocumentChange:(FIRDocumentChange *) change {
@@ -142,7 +144,7 @@
     [self.channelView.channelsTableView insertRowsAtIndexPaths:paths withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
--(void)removeChannelToTable:(ChannelsDetails *)channel {
+- (void)removeChannelToTable:(ChannelsDetails *)channel {
     NSInteger index = [ _channels indexOfObject:channel];
     if([_channels containsObject:channel]) {
         [_channels removeObject:channel];
@@ -152,22 +154,23 @@
     [self.channelView.channelsTableView insertRowsAtIndexPaths:paths withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
--(void)updateChannelToTable:(ChannelsDetails *)channel {
+- (void)updateChannelToTable:(ChannelsDetails *)channel {
     NSInteger index = [_channels indexOfObject:channel];
     _channels[index] = channel;
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
     NSArray *paths = [NSArray arrayWithObject:indexPath];
     [self.channelView.channelsTableView insertRowsAtIndexPaths:paths withRowAnimation:UITableViewRowAnimationAutomatic];
 }
--(NSUInteger)numberOfSectionInTableView:(UITableView *)tableView {
+
+- (NSUInteger)numberOfSectionInTableView:(UITableView *)tableView {
     return 1;
 }
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [_channels count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    
     ChannelsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"displayCell"];
     ChannelsDetails *channel = _channels[indexPath.row];
     cell.channelNameLabel.text = channel.channelName;
@@ -179,19 +182,12 @@
     if (channel == nil) {
         return;
     }
-    ChatViewController *vc = [ChatViewController initWithChannel:channel];
-    
-    
+    ChatViewController *vc = [ChatViewController initWithChannel:channel user:_currentUser];
+    if ([self navigationController] != nil) {
+        [[self navigationController] showViewController:vc sender:nil];
+    } else {
+        [self presentViewController:vc animated:YES completion:nil];
+    }
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

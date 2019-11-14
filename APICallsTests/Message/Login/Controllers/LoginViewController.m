@@ -25,11 +25,24 @@
     [self.view addSubview:self.loginView];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"goToChannels"]) {
+        UINavigationController *navVc = [segue destinationViewController];
+        ChannelsViewController *channelsVc = navVc.viewControllers[0];
+        FIRUser *user = sender;
+        channelsVc.currentUser = user;
+    }
+}
+
 - (void) didTapSignIn {
     NSString *usernameText = self.loginView.usernameText.text;
     [[AppSettings sharedAppDataSettings] setUsername:usernameText];
     [[FIRAuth auth] signInAnonymouslyWithCompletion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
-        [self performSegueWithIdentifier:@"goToChannels" sender:nil];
+        if (error != nil) {
+            NSLog(@"Error signing in");
+            return;
+        }
+        [self performSegueWithIdentifier:@"goToChannels" sender:[authResult user]];
     }];
 }
 /*

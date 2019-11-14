@@ -11,7 +11,7 @@
 
 @interface AppSettings:NSObject
 
-@property (strong, nonatomic) NSString *username;
+//@property (strong, nonatomic) NSString *username;
 
 - (NSString *)getUsername;
 -(void)setUsername:(NSString *)username;

@@ -13,13 +13,12 @@
 
 - (NSString *)getUsername {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    _username = [defaults objectForKey:@"username"];
-    return _username;
+    return [defaults objectForKey:@"username"];
 }
 
 - (void)setUsername:(NSString *)username {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [_username setValue:defaults forKey:@"username"];
+    [defaults setObject:username forKey:@"username"];
 }
 
 + (instancetype)sharedAppDataSettings {

@@ -23,7 +23,7 @@
         return nil;
     }
     ChannelsDetails *channel = [ChannelsDetails initWith:name];
-    channel.channelId = data[@"id"];
+    channel.channelId = document.documentID;
     return channel;
 }
 

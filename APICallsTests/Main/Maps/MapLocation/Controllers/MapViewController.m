@@ -52,6 +52,7 @@ const float zoom = 15.0f;
 - (void)createLocationServices {
     if (_locationManager == nil) {
         _locationManager = [[CLLocationManager alloc] init];
+        self.locationView.mapView.delegate = self;
         _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         [_locationManager startUpdatingLocation];
     }
@@ -77,7 +78,7 @@ const float zoom = 15.0f;
         GMSMarker *marker = [[GMSMarker alloc] init];
         marker.position = restoLocation;
         marker.title = restaurant.restaurantName;
-        marker.snippet = @"Restaurant";
+        marker.snippet = restaurant.restaurantId;
         marker.map = self.locationView.mapView;
         marker.appearAnimation = kGMSMarkerAnimationPop;
         marker.tappable = YES;
@@ -103,16 +104,39 @@ const float zoom = 15.0f;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"returnDetails"]) {
         UINavigationController *navVc = [segue destinationViewController];
-        RestaurantDetailsViewController *restoVc = navVc.viewControllers[0];
-        restoVc.food = self.restaurants;
+        RestaurantDetailsViewController *restaurantDetailsVc = navVc.viewControllers[0];
+        restaurantDetailsVc.restaurant = self.restaurant;
     }
 }
 
 - (BOOL) mapView: (GMSMapView *)mapView didTapMarker:(GMSMarker *)marker {
-    [mapView setSelectedMarker:marker];
-    
-    [self performSegueWithIdentifier:@"returnDetails" sender:nil];
-    return YES;
+    for (Foods *restoObject in self.restaurants) {
+        
+        if ([restoObject.restaurantId isEqualToString:marker.snippet]) {
+            self.restaurant = restoObject;
+            [self performSegueWithIdentifier:@"returnDetails" sender:nil];
+            return YES;
+        }
+    }
+    return NO;
+}
+
+- (void)checkLocationServicesAccess {
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    switch (status) {
+        case kCLAuthorizationStatusDenied:
+            [_locationManager requestWhenInUseAuthorization];
+            break;
+        case kCLAuthorizationStatusRestricted:
+            break;
+        case kCLAuthorizationStatusNotDetermined:
+            [_locationManager requestWhenInUseAuthorization];
+            break;
+        case kCLAuthorizationStatusAuthorizedAlways:
+            break;
+        case kCLAuthorizationStatusAuthorizedWhenInUse:
+            break;
+    }
 }
 
 @end

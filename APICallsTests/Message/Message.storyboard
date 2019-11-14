@@ -41,7 +41,7 @@
                     <navigationItem key="navigationItem" id="2Zx-lM-tSL"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="qdM-LA-Gjn" kind="show" identifier="goToChannels" id="uzq-fW-2fy"/>
+                        <segue destination="UZl-La-DTK" kind="show" identifier="goToChannels" id="nKY-AV-f6w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="36N-tH-KLp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -49,28 +49,12 @@
             <point key="canvasLocation" x="920" y="21"/>
         </scene>
         <!--Channels-->
-        <scene sceneID="VLb-AB-TeH">
+        <scene sceneID="fYL-9l-ydb">
             <objects>
-                <viewController id="qdM-LA-Gjn" customClass="ChannelsViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uj3-X0-LML">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Bao-Hj-6q1"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="TdD-XX-izV"/>
-                    <navigationItem key="navigationItem" title="Channels" id="Q5p-n3-VSO">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="4CQ-GS-uXa">
-                            <connections>
-                                <action selector="didTapAddChannels:" destination="qdM-LA-Gjn" id="HVh-qr-uaT"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qbw-I6-hBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Channels" id="UZl-La-DTK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MGS-rg-RJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1694" y="21"/>
+            <point key="canvasLocation" x="1520" y="21"/>
         </scene>
     </scenes>
 </document>

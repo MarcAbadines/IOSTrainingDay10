@@ -9,13 +9,20 @@
 #import <UIKit/UIKit.h>
 #import <FirebaseFirestore/FirebaseFirestore.h>
 #import <FirebaseCore/FirebaseCore.h>
+#import <FirebaseAuth/FirebaseAuth.h>
 #import "../../Channels/Models/ChannelsDetails.h"
+#import <JSQMessagesViewController/JSQMessagesViewController.h>
+#import <JSQMessagesAvatarImageFactory.h>
+#import <JSQMessagesBubbleImageFactory.h>
+#import "Message.h"
+#import "../../../Utilities/AppSettings.h"
+#import <JSQMessagesComposerTextView.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ChatViewController : UIViewController
+@interface ChatViewController : JSQMessagesViewController <JSQMessagesInputToolbarDelegate, JSQMessagesCollectionViewDataSource, JSQMessageBubbleImageDataSource, JSQMessageAvatarImageDataSource>
 
-+ (instancetype)initWithChannel:(ChannelsDetails *) channels;
++ (instancetype)initWithChannel:(ChannelsDetails *) channel user:(FIRUser *) user ;
 
 @end
 

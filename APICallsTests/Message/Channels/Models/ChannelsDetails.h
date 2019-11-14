@@ -8,6 +8,7 @@
 
 #import "DatabasePresentation.h"
 #import <Foundation/Foundation.h>
+#import <FirebaseAuth/FirebaseAuth.h>
 #import <FirebaseFirestore/FirebaseFirestore.h>
 
 NS_ASSUME_NONNULL_BEGIN

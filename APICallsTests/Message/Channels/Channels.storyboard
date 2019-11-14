@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fUz-OQ-9ig">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="KHU-bl-aFT">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6uy-bf-JMO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="fUz-OQ-9ig" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yKX-ji-mge">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="k2d-vU-KP2" kind="relationship" relationship="rootViewController" id="h44-2j-XPm"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-823" y="96"/>
+        </scene>
+        <!--Channels View Controller-->
+        <scene sceneID="osk-pi-0VN">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NFe-fu-xFn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="k2d-vU-KP2" customClass="ChannelsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VC0-kh-7bM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dLm-lh-85T"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Bm-Ph-iPD">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="v5H-B4-sxa">
+                            <connections>
+                                <action selector="didTapBackButton:" destination="k2d-vU-KP2" id="NrE-IE-L9J"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="A9u-m6-FcL">
+                            <connections>
+                                <action selector="didTapAddChannels:" destination="k2d-vU-KP2" id="RgQ-UG-AjS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="12" y="96"/>
+        </scene>
+    </scenes>
+</document>

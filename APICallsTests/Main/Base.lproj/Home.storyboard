@@ -47,12 +47,20 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="BiH-HO-BIf" kind="show" identifier="displayRestaurantIdentifier" id="Z7P-cN-2NB"/>
+                        <segue destination="BDa-90-6zt" kind="show" identifier="continueToDetails" id="ULv-O2-V4f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1H-UP-bax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1696" y="19"/>
+        </scene>
+        <!--RestaurantDetails-->
+        <scene sceneID="e8E-96-zaU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RestaurantDetails" id="BDa-90-6zt" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HIT-0j-sdv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2345" y="40"/>
         </scene>
         <!--MapView-->
         <scene sceneID="rf6-7y-jFE">
@@ -60,22 +68,7 @@
                 <viewControllerPlaceholder storyboardName="MapView" id="JV1-wr-5af" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83D-dn-2LQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2246" y="-428"/>
-        </scene>
-        <!--Restaurant Details View Controller-->
-        <scene sceneID="h4S-xR-pZ6">
-            <objects>
-                <viewController storyboardIdentifier="returnDetails" id="BiH-HO-BIf" customClass="RestaurantDetailsViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="32L-8e-orA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="a64-xO-1gj"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vfC-YM-Wss" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2487" y="19"/>
+            <point key="canvasLocation" x="2302" y="-4"/>
         </scene>
         <!--Restaurant-->
         <scene sceneID="G16-ku-6bL">

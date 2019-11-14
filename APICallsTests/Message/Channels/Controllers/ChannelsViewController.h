@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong,nonatomic) ChannelsView *channelView;
 @property (strong, readonly) NSMutableArray *channels;
+@property (strong,nonatomic) FIRUser *currentUser;
 
 @end
 

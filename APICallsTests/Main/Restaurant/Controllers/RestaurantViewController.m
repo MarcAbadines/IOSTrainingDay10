@@ -96,12 +96,13 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     Foods *restaurant = self.restaurants[indexPath.item];
     self.restaurant = restaurant;
-    [self performSegueWithIdentifier:@"displayRestaurantIdentifier" sender:nil];
+    [self performSegueWithIdentifier:@"continueToDetails" sender:nil];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"displayRestaurantIdentifier"]) {
-        RestaurantDetailsViewController *restaurantDetailsVc = [segue destinationViewController];
+    if ([segue.identifier isEqualToString:@"continueToDetails"]) {
+        UINavigationController *navVc = [segue destinationViewController];
+        RestaurantDetailsViewController *restaurantDetailsVc = navVc.viewControllers[0];
         restaurantDetailsVc.restaurant = self.restaurant;
     } else if ([segue.identifier isEqualToString:@"continueToMap"]) {
         UINavigationController *navVc = [segue destinationViewController];

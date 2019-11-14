@@ -13,13 +13,13 @@
 + (instancetype)initWithDocument:(FIRQueryDocumentSnapshot *)document {
     NSDictionary *data = document.data;
     NSString *senderId = data[@"senderId"];
-    NSString *senderName = data[@"sendername"];
-    NSDate *date = data[@"date"];
+    NSString *senderName = data[@"senderName"];
     NSString *text = data[@"text"];
+    FIRTimestamp *timeStampSent = data[@"date"];
     if (senderId == nil) {
         return nil;
     }
-    Message *message = [[Message alloc] initWithSenderId:senderId senderDisplayName:senderName date:date text:text];
+    Message *message = [[Message alloc] initWithSenderId:senderId senderDisplayName:senderName date:[timeStampSent dateValue] text:text];
     return message;
 }
 

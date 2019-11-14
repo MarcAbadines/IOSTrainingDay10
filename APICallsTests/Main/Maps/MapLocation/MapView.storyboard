@@ -52,13 +52,13 @@
             </objects>
             <point key="canvasLocation" x="-117" y="-13"/>
         </scene>
-        <!--Home-->
+        <!--RestaurantDetails-->
         <scene sceneID="rM3-bt-gVk">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="7tg-2q-QaP" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="RestaurantDetails" id="7tg-2q-QaP" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5c8-xE-7CH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="413" y="-13"/>
+            <point key="canvasLocation" x="488" y="-13"/>
         </scene>
     </scenes>
 </document>
