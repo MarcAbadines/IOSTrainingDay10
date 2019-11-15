@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *restaurantRatingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *restaurantAddressLabel;
 @property (weak, nonatomic) IBOutlet GMSMapView *miniRestaurantMapView;
+@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 
 @end
 

@@ -41,23 +41,6 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.channelView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin |
-    UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
-    self.channelView = (ChannelsView*)[[[NSBundle mainBundle] loadNibNamed:@"ChannelsView" owner:self options:nil] objectAtIndex:0];
-    _channelsDb = [FIRFirestore firestore];
-    _channelsRef = [_channelsDb collectionWithPath:@"channel"];
-    self.navigationItem.title = [[AppSettings sharedAppDataSettings] getUsername];
-    _channels = [[NSMutableArray alloc]init];
-    self.channelView.channelsTableView.delegate = self;
-    self.channelView.channelsTableView.dataSource = self;
-    [self.channelView.channelsTableView registerNib:[UINib nibWithNibName:@"ChannelsTableViewCell" bundle:nil] forCellReuseIdentifier:@"displayCell"];
-    self.channelView.frame = self.view.frame;
-    [self.view addSubview:self.channelView];
-    [self setUp];
-}
-
 - (IBAction)didTapAddChannels:(id)sender {
     UIAlertController * alert = [UIAlertController
                                  alertControllerWithTitle:@"Create Channel"
@@ -83,10 +66,28 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.channelView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin |
+    UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+    self.channelView = (ChannelsView*)[[[NSBundle mainBundle] loadNibNamed:@"ChannelsView" owner:self options:nil] objectAtIndex:0];
+    _channelsDb = [FIRFirestore firestore];
+    _channelsRef = [_channelsDb collectionWithPath:@"channel"];
+    self.navigationItem.title = [[AppSettings sharedAppDataSettings] getUsername];
+    _channels = [[NSMutableArray alloc]init];
+    self.channelView.channelsTableView.delegate = self;
+    self.channelView.channelsTableView.dataSource = self;
+    [self.channelView.channelsTableView registerNib:[UINib nibWithNibName:@"ChannelsTableViewCell" bundle:nil] forCellReuseIdentifier:@"displayCell"];
+    self.channelView.frame = self.view.frame;
+    [self.view addSubview:self.channelView];
+    [self setUpChannels];
+}
+
 - (void) didTapSave {
     UITextField *textField = _alertController.textFields[0];
-    if (textField == nil) {
-        [self showErrorWith:@"Please input name"];
+    NSString *channelText = textField.text;
+    if ([channelText isEqualToString:@""]) {
+        [self showErrorWith:@"Please input channel name"];
         return;
     }
     ChannelsViewController *vc = self;
@@ -103,22 +104,7 @@
     }];
 }
 
-- (void)showErrorWith:(NSString *)message{
-    UIAlertController * alert = [UIAlertController
-                                 alertControllerWithTitle:@"Channel Message"
-                                 message:message
-                                 preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction* okButton = [UIAlertAction
-                               actionWithTitle:@"OK"
-                               style:UIAlertActionStyleDefault
-                               handler:^(UIAlertAction * action) {
-                               }];
-    [alert addAction:okButton];
-    _alertController = alert;
-    [self presentViewController:alert animated:YES completion:nil];
-}
-
-- (void)setUp {
+- (void)setUpChannels {
     _channelsDb = [FIRFirestore firestore];
     _channelsRef = [_channelsDb collectionWithPath:@"channel"];
     _channels = [[NSMutableArray alloc]init];
@@ -149,6 +135,21 @@
             [self removeChannelToTable:channel];
             break;
     }
+}
+
+- (void)showErrorWith:(NSString *)message{
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"Channel Message"
+                                 message:message
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* okButton = [UIAlertAction
+                               actionWithTitle:@"OK"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action) {
+                               }];
+    [alert addAction:okButton];
+    _alertController = alert;
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)addtoChannelToTable:(ChannelsDetails *)channel {
@@ -222,4 +223,5 @@
         [[_channelsRef documentWithPath:channel.channelId] deleteDocument];
     }
 }
+
 @end

@@ -16,15 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *restaurantName;
 @property (strong, nonatomic) NSString *restaurantAddress;
 @property (strong, nonatomic) NSString *restaurantThumb;
-@property (assign) float restaurantUserRating;
-@property (assign) float restaurantAggregateRating;
 @property (strong, nonatomic) NSString *restaurantCuisines;
 @property (strong, nonatomic) NSString *restaurantTiming;
-@property (strong, nonatomic) NSString *restaurantReviews;
-@property (assign) float restaurantAverageCostForTwo;
 @property (strong, nonatomic) NSString *restaurantLatitude;
 @property (strong, nonatomic) NSString *restaurantLongitude;
-
+@property (assign) float restaurantAverageCostForTwo;
+@property (assign) float restaurantUserRating;
+@property (assign) float restaurantAggregateRating;
 
 - (id) restaurantId:(NSString *)restaurantId;
 + (instancetype) restaurantId:(NSString *)restaurantId;

@@ -230,8 +230,8 @@
 				5B0ADB2423751581008FAD9E /* AppDelegate.m */,
 				5B0ADB2C23751582008FAD9E /* Assets.xcassets */,
 				5B0C1146237A7840003B8236 /* Main.storyboard */,
-				5B0C1145237A603A003B8236 /* APICallsTests.entitlements */,
 				5B0ADB2E23751582008FAD9E /* LaunchScreen.storyboard */,
+				5B0C1145237A603A003B8236 /* APICallsTests.entitlements */,
 				5B0ADB3123751582008FAD9E /* Info.plist */,
 				5BE76565237BF98C00E0DF33 /* GoogleService-Info.plist */,
 				5B0ADB3223751582008FAD9E /* main.m */,
@@ -376,10 +376,10 @@
 			isa = PBXGroup;
 			children = (
 				5B0ADB2923751581008FAD9E /* Home.storyboard */,
-				5BE2113A23793FFA0011E2D0 /* Maps */,
+				5B5A185C2375187B0049529D /* Home */,
 				5BD8E0EA23767D01006F83B8 /* Restaurant */,
 				5B8B974B2377E08800A5C910 /* RestaurantDetails */,
-				5B5A185C2375187B0049529D /* Home */,
+				5BE2113A23793FFA0011E2D0 /* Maps */,
 			);
 			path = Main;
 			sourceTree = "<group>";

@@ -70,9 +70,7 @@
             [_messages addObject:msg];
             [self.collectionView reloadData];
             [self scrollToBottomAnimated:YES];
-            [self setShowTypingIndicator:YES];
             break;
-
         case FIRDocumentChangeTypeModified:
             break;
         case FIRDocumentChangeTypeRemoved:

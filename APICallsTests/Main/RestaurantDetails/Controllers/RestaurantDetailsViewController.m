@@ -27,7 +27,6 @@
     self.navigationItem.title = @"Restaurant";
     [self getRestaurantDetails];
     [self settingUpMap];
-
 }
 
 - (void)getRestaurantDetails {
@@ -37,7 +36,6 @@
     self.restaurantDetailsView.restaurantAddressLabel.text = self.restaurant.restaurantAddress;
     self.restaurantDetailsView.restaurantTimingLabel.text = self.restaurant.restaurantTiming;
     self.restaurantDetailsView.foodCostLabel.text = [NSString stringWithFormat:@"%.02f", self.restaurant.restaurantAverageCostForTwo];
-    NSLog(@"%@",self.restaurant.restaurantReviews);
     NSArray  *data = [self.restaurant.restaurantThumb componentsSeparatedByString:@"?"];
     for(NSString* str in data) {
         if([NSURLConnection canHandleRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]]) {
@@ -45,6 +43,30 @@
             self.restaurantDetailsView.restaurantImage.image = [UIImage imageWithData: imageData];
         }
     }
+    CLLocationDistance distance = [self distanceBetweenCoordinate:[self getCoordinate] andCoordinate:[self getSecondCoordinate]];
+    self.restaurantDetailsView.distanceLabel.text = [NSString stringWithFormat:@"Distance from %@: %.4f km", self.restaurant.restaurantName, distance];
+}
+
+- (CLLocationCoordinate2D)getCoordinate {
+    CLLocationCoordinate2D newCoordinate;
+    newCoordinate.latitude = [_currentLatitude floatValue];
+    newCoordinate.longitude = [_currentLongitude floatValue];
+    return newCoordinate;
+}
+
+- (CLLocationCoordinate2D)getSecondCoordinate {
+    CLLocationCoordinate2D newCoordinate;
+    newCoordinate.latitude = [self.restaurant.restaurantLatitude floatValue];
+    newCoordinate.longitude = [self.restaurant.restaurantLongitude floatValue];
+    return newCoordinate;
+}
+
+- (CLLocationDistance)distanceBetweenCoordinate:(CLLocationCoordinate2D)originCoordinate andCoordinate:(CLLocationCoordinate2D)destinationCoordinate {
+    CLLocation *originLocation = [[CLLocation alloc] initWithLatitude:originCoordinate.latitude longitude:originCoordinate.longitude];
+    CLLocation *destinationLocation = [[CLLocation alloc] initWithLatitude:destinationCoordinate.latitude longitude:destinationCoordinate.longitude];
+    CLLocationDistance distance = [originLocation distanceFromLocation:destinationLocation];
+    
+    return distance / 1000;
 }
 
 - (void)initLocationServices {
@@ -53,13 +75,6 @@
         _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         [_locationManager startUpdatingLocation];
     }
-}
-
-- (CLLocationCoordinate2D)getCoordinate {
-    CLLocationCoordinate2D newCoordinate;
-    newCoordinate.latitude = [_currentLatitude floatValue];
-    newCoordinate.longitude = [_currentLongitude floatValue];
-    return newCoordinate;
 }
 
 - (void)settingUpMap {
@@ -76,7 +91,6 @@
     CLLocation *location = [[CLLocation alloc] initWithLatitude:restoLocation.latitude longitude:restoLocation.longitude];
     [self centerToLocation:location];
     self.restaurantDetailsView.miniRestaurantMapView.myLocationEnabled = YES;
-    
 }
 
 - (void)centerToLocation:(CLLocation *)location {

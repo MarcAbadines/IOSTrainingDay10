@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "../Views/HomeView.h"
 #import <AFNetworking/AFNetworking.h>
+#import "../Views/HomeView.h"
 #import "../Models/Categories.h"
 #import "../Views/Cell/HomeTableViewCell.h"
 #import "../../Restaurant/Controllers/RestaurantViewController.h"

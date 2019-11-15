@@ -42,10 +42,10 @@
                                      message:@"Please input guest name"
                                      preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction* okButton = [UIAlertAction
-                                   actionWithTitle:@"OK"
-                                   style:UIAlertActionStyleDefault
-                                   handler:^(UIAlertAction * action) {
-                                   }];
+                                     actionWithTitle:@"OK"
+                                     style:UIAlertActionStyleDefault
+                                     handler:^(UIAlertAction * action) {
+                                     }];
         [alert addAction:okButton];
         [self presentViewController:alert animated:YES completion:nil];
     } else {
@@ -60,14 +60,6 @@
     }
     self.loginView.usernameText.text = nil;
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

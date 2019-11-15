@@ -74,6 +74,13 @@
                             <rect key="frame" x="40" y="582" width="366" height="205"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEX-SP-eam">
+                            <rect key="frame" x="40" y="795" width="350" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.1900083206" green="0.76130234770000005" blue="0.070198291819999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <constraints>
                         <constraint firstItem="gvA-W1-Rqv" firstAttribute="top" secondItem="Pm8-Up-jUr" secondAttribute="bottom" constant="7.5" id="5Sp-8p-EqF"/>
@@ -122,6 +129,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="10O-Gq-5WC"/>
             <connections>
+                <outlet property="distanceLabel" destination="XEX-SP-eam" id="RtB-um-XP1"/>
                 <outlet property="foodCostLabel" destination="EZU-vT-QZI" id="WT8-zz-rAH"/>
                 <outlet property="miniRestaurantMapView" destination="gvA-W1-Rqv" id="J14-4X-uWY"/>
                 <outlet property="restaurantAddressLabel" destination="Pm8-Up-jUr" id="pcw-Yv-w2y"/>
