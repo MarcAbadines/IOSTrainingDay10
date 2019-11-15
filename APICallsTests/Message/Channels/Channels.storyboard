@@ -38,7 +38,7 @@
                         <viewLayoutGuide key="safeArea" id="dLm-lh-85T"/>
                     </view>
                     <navigationItem key="navigationItem" id="1Bm-Ph-iPD">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="v5H-B4-sxa">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="v5H-B4-sxa">
                             <connections>
                                 <action selector="didTapBackButton:" destination="k2d-vU-KP2" id="NrE-IE-L9J"/>
                             </connections>

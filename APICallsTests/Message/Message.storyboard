@@ -14,7 +14,7 @@
         <scene sceneID="jP8-2P-g2M">
             <objects>
                 <navigationController id="QcD-Qz-1dn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Message" id="DCb-TR-W52"/>
+                    <tabBarItem key="tabBarItem" title="Message" image="ic_message" landscapeImage="ic_message" id="DCb-TR-W52"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FHa-tq-8eS">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -57,4 +57,7 @@
             <point key="canvasLocation" x="1520" y="21"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_message" width="30" height="30"/>
+    </resources>
 </document>

@@ -29,7 +29,7 @@
 }
 
 - (void)viewDidLoad {
-    self.navigationItem.title = [[AppSettings sharedAppDataSettings] getUsername];
+    self.navigationItem.title = _channel.channelName;
     [super viewDidLoad];
     [self setUpInterface];
     [self setUp];
@@ -114,7 +114,7 @@
 - (id <JSQMessageAvatarImageDataSource>)collectionView:(JSQMessagesCollectionView *)collectionView avatarImageDataForItemAtIndexPath:(NSIndexPath *)indexPath {
     JSQMessagesAvatarImageFactory *factory = [[JSQMessagesAvatarImageFactory alloc] init];
     Message *msg = _messages[indexPath.row];
-    NSString *initial = @"U";
+    NSString *initial = @"👤";
     if (![msg.senderDisplayName isEqualToString:@""]) {
         initial = [[msg.senderDisplayName substringToIndex:1] capitalizedString];
     }
@@ -125,7 +125,7 @@
     JSQMessagesBubbleImageFactory *factory =[[JSQMessagesBubbleImageFactory alloc] init];
     Message *msg = _messages[indexPath.row];
     if ([self.senderId isEqualToString:msg.senderId]) {
-        return [factory outgoingMessagesBubbleImageWithColor:UIColor.grayColor];
+        return [factory outgoingMessagesBubbleImageWithColor:UIColor.blueColor];
     }
     return [factory incomingMessagesBubbleImageWithColor:UIColor.greenColor];
 }

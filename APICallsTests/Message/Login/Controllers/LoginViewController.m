@@ -36,14 +36,29 @@
 
 - (void) didTapSignIn {
     NSString *usernameText = self.loginView.usernameText.text;
-    [[AppSettings sharedAppDataSettings] setUsername:usernameText];
-    [[FIRAuth auth] signInAnonymouslyWithCompletion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
-        if (error != nil) {
-            NSLog(@"Error signing in");
-            return;
-        }
-        [self performSegueWithIdentifier:@"goToChannels" sender:[authResult user]];
-    }];
+    if ([usernameText isEqualToString:@""]) {
+        UIAlertController * alert = [UIAlertController
+                                     alertControllerWithTitle:@"Login"
+                                     message:@"Please input guest name"
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* okButton = [UIAlertAction
+                                   actionWithTitle:@"OK"
+                                   style:UIAlertActionStyleDefault
+                                   handler:^(UIAlertAction * action) {
+                                   }];
+        [alert addAction:okButton];
+        [self presentViewController:alert animated:YES completion:nil];
+    } else {
+        [[AppSettings sharedAppDataSettings] setUsername:usernameText];
+        [[FIRAuth auth] signInAnonymouslyWithCompletion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
+            if (error != nil) {
+                NSLog(@"Error signing in");
+                return;
+            }
+            [self performSegueWithIdentifier:@"goToChannels" sender:[authResult user]];
+        }];
+    }
+    self.loginView.usernameText.text = nil;
 }
 /*
 #pragma mark - Navigation

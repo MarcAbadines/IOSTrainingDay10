@@ -20,7 +20,25 @@
 
 @implementation ChannelsViewController
 - (IBAction)didTapBackButton:(id)sender {
-      [self dismissViewControllerAnimated:YES completion:nil];
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"Exit Page"
+                                 message:@"Are you sure you want to leave this page?"
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* yesButton = [UIAlertAction
+                                actionWithTitle:@"Yes"
+                                style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * action) {
+                                    [[FIRAuth auth] signOut:nil];
+                                    [self dismissViewControllerAnimated:YES completion:nil];
+                                }];
+    UIAlertAction* noButton = [UIAlertAction
+                               actionWithTitle:@"No"
+                               style:UIAlertActionStyleDestructive
+                               handler:^(UIAlertAction * action) {
+                               }];
+    [alert addAction:yesButton];
+    [alert addAction:noButton];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)viewDidLoad {
@@ -30,11 +48,11 @@
     self.channelView = (ChannelsView*)[[[NSBundle mainBundle] loadNibNamed:@"ChannelsView" owner:self options:nil] objectAtIndex:0];
     _channelsDb = [FIRFirestore firestore];
     _channelsRef = [_channelsDb collectionWithPath:@"channel"];
+    self.navigationItem.title = [[AppSettings sharedAppDataSettings] getUsername];
     _channels = [[NSMutableArray alloc]init];
     self.channelView.channelsTableView.delegate = self;
     self.channelView.channelsTableView.dataSource = self;
     [self.channelView.channelsTableView registerNib:[UINib nibWithNibName:@"ChannelsTableViewCell" bundle:nil] forCellReuseIdentifier:@"displayCell"];
-    self.navigationItem.title = @"Channels";
     self.channelView.frame = self.view.frame;
     [self.view addSubview:self.channelView];
     [self setUp];
@@ -53,7 +71,7 @@
                                }];
     UIAlertAction* cancelButton = [UIAlertAction
                                    actionWithTitle:@"Cancel"
-                                   style:UIAlertActionStyleDefault
+                                   style:UIAlertActionStyleDestructive
                                    handler:^(UIAlertAction * action) {
                                    }];
     [alert addAction:saveButton];
@@ -145,13 +163,17 @@
 }
 
 - (void)removeChannelToTable:(ChannelsDetails *)channel {
-    NSInteger index = [ _channels indexOfObject:channel];
-    if([_channels containsObject:channel]) {
-        [_channels removeObject:channel];
+    int count = 0;
+    for (ChannelsDetails *channelObj in _channels) {
+        if ([channelObj.channelName isEqualToString:channel.channelName]){
+            [_channels removeObjectAtIndex:count];
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:count inSection:0];
+            NSArray *paths = [NSArray arrayWithObject:indexPath];
+            [self.channelView.channelsTableView deleteRowsAtIndexPaths:paths withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+        }
+        count++;
     }
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
-    NSArray *paths = [NSArray arrayWithObject:indexPath];
-    [self.channelView.channelsTableView insertRowsAtIndexPaths:paths withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (void)updateChannelToTable:(ChannelsDetails *)channel {
@@ -190,4 +212,14 @@
     }
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        ChannelsDetails *channel = _channels[indexPath.row];
+        [[_channelsRef documentWithPath:channel.channelId] deleteDocument];
+    }
+}
 @end

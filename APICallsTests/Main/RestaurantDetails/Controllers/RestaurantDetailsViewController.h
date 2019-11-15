@@ -17,6 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) RestaurantDetailsView *restaurantDetailsView;
 @property (strong, readwrite) Foods *restaurant;
 @property (strong, readwrite) NSMutableArray *food;
+@property (strong, nonatomic) NSString *currentLatitude;
+@property (strong, nonatomic) NSString *currentLongitude;
+@property (strong, nonatomic) CLLocation *clLocation;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
 

@@ -26,6 +26,8 @@
     [self.view addSubview:self.restaurantDetailsView];
     self.navigationItem.title = @"Restaurant";
     [self getRestaurantDetails];
+    [self settingUpMap];
+
 }
 
 - (void)getRestaurantDetails {
@@ -43,6 +45,43 @@
             self.restaurantDetailsView.restaurantImage.image = [UIImage imageWithData: imageData];
         }
     }
+}
+
+- (void)initLocationServices {
+    if (_locationManager == nil) {
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        [_locationManager startUpdatingLocation];
+    }
+}
+
+- (CLLocationCoordinate2D)getCoordinate {
+    CLLocationCoordinate2D newCoordinate;
+    newCoordinate.latitude = [_currentLatitude floatValue];
+    newCoordinate.longitude = [_currentLongitude floatValue];
+    return newCoordinate;
+}
+
+- (void)settingUpMap {
+    CLLocationCoordinate2D restoLocation;
+    restoLocation.latitude = [self.restaurant.restaurantLatitude floatValue];
+    restoLocation.longitude = [self.restaurant.restaurantLongitude floatValue];
+    
+    GMSMarker *marker = [[GMSMarker alloc] init];
+    marker.position = restoLocation;
+    marker.title = self.restaurant.restaurantName;
+    marker.snippet = self.restaurant.restaurantId;
+    marker.map = self.restaurantDetailsView.miniRestaurantMapView;
+    
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:restoLocation.latitude longitude:restoLocation.longitude];
+    [self centerToLocation:location];
+    self.restaurantDetailsView.miniRestaurantMapView.myLocationEnabled = YES;
+    
+}
+
+- (void)centerToLocation:(CLLocation *)location {
+    GMSCameraPosition *camera = [GMSMutableCameraPosition cameraWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude zoom:15];
+    self.restaurantDetailsView.miniRestaurantMapView.camera = camera;
 }
 
 @end

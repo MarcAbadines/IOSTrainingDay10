@@ -17,24 +17,7 @@
 @implementation MapViewController
 
 - (IBAction)tapBackButton:(id)sender {
-    UIAlertController * alert = [UIAlertController
-                                 alertControllerWithTitle:@"Message"
-                                 message:@"Are you sure you want to leave this page?"
-                                 preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction* yesButton = [UIAlertAction
-                                actionWithTitle:@"Yes"
-                                style:UIAlertActionStyleDefault
-                                handler:^(UIAlertAction * action) {
-                                    [self dismissViewControllerAnimated:YES completion:nil];
-                                }];
-    UIAlertAction* noButton = [UIAlertAction
-                               actionWithTitle:@"No"
-                               style:UIAlertActionStyleDefault
-                               handler:^(UIAlertAction * action) {
-                               }];
-    [alert addAction:yesButton];
-    [alert addAction:noButton];
-    [self presentViewController:alert animated:YES completion:nil];
+     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -61,6 +44,7 @@ const float zoom = 15.0f;
 - (void)centerToLocation:(CLLocation *)location {
     GMSCameraPosition *camera = [GMSMutableCameraPosition cameraWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude zoom:zoom];
     self.locationView.mapView.camera = camera;
+    self.locationView.mapView.myLocationEnabled = true;
 }
 
 - (void)setupMap {
@@ -85,6 +69,7 @@ const float zoom = 15.0f;
         counter++;
     }
     self.locationView.mapView.myLocationEnabled = YES;
+    
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
@@ -119,24 +104,6 @@ const float zoom = 15.0f;
         }
     }
     return NO;
-}
-
-- (void)checkLocationServicesAccess {
-    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
-    switch (status) {
-        case kCLAuthorizationStatusDenied:
-            [_locationManager requestWhenInUseAuthorization];
-            break;
-        case kCLAuthorizationStatusRestricted:
-            break;
-        case kCLAuthorizationStatusNotDetermined:
-            [_locationManager requestWhenInUseAuthorization];
-            break;
-        case kCLAuthorizationStatusAuthorizedAlways:
-            break;
-        case kCLAuthorizationStatusAuthorizedWhenInUse:
-            break;
-    }
 }
 
 @end

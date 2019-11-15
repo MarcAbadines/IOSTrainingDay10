@@ -377,8 +377,8 @@
 			children = (
 				5B0ADB2923751581008FAD9E /* Home.storyboard */,
 				5BE2113A23793FFA0011E2D0 /* Maps */,
-				5B8B974B2377E08800A5C910 /* RestaurantDetails */,
 				5BD8E0EA23767D01006F83B8 /* Restaurant */,
+				5B8B974B2377E08800A5C910 /* RestaurantDetails */,
 				5B5A185C2375187B0049529D /* Home */,
 			);
 			path = Main;

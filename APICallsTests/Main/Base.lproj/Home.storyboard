@@ -74,7 +74,7 @@
         <scene sceneID="G16-ku-6bL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1jx-KD-qfX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Restaurant" id="bRN-kS-UEK"/>
+                    <tabBarItem key="tabBarItem" title="Restaurant" image="ic_restaurant" landscapeImage="ic_restaurant" id="bRN-kS-UEK"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lBv-MR-gN8">
@@ -91,4 +91,7 @@
             <point key="canvasLocation" x="126" y="21"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_restaurant" width="30" height="30"/>
+    </resources>
 </document>

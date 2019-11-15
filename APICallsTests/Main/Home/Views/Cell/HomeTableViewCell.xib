@@ -19,23 +19,35 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8B-v5-sfm">
-                        <rect key="frame" x="13" y="11" width="381" height="21"/>
+                        <rect key="frame" x="64" y="11" width="294" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_food" translatesAutoresizingMaskIntoConstraints="NO" id="yPp-Hm-Pay">
+                        <rect key="frame" x="0.0" y="6" width="56" height="31"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_next" translatesAutoresizingMaskIntoConstraints="NO" id="Y9w-QD-BRn">
+                        <rect key="frame" x="358" y="6" width="56" height="31"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="r8B-v5-sfm" secondAttribute="bottom" constant="11.5" id="5me-64-xKR"/>
-                    <constraint firstItem="r8B-v5-sfm" firstAttribute="leading" secondItem="6lX-sq-q62" secondAttribute="leading" constant="13" id="L8o-Pw-hcZ"/>
-                    <constraint firstAttribute="trailing" secondItem="r8B-v5-sfm" secondAttribute="trailing" constant="20" id="ZOa-AK-NXa"/>
+                    <constraint firstItem="r8B-v5-sfm" firstAttribute="leading" secondItem="6lX-sq-q62" secondAttribute="leading" constant="64" id="L8o-Pw-hcZ"/>
+                    <constraint firstAttribute="trailing" secondItem="r8B-v5-sfm" secondAttribute="trailing" constant="56" id="ZOa-AK-NXa"/>
                     <constraint firstItem="r8B-v5-sfm" firstAttribute="top" secondItem="6lX-sq-q62" secondAttribute="top" constant="11" id="gqy-Ld-5gf"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="nameLabel" destination="r8B-v5-sfm" id="o7f-Lr-TYk"/>
             </connections>
-            <point key="canvasLocation" x="156.52173913043478" y="34.821428571428569"/>
+            <point key="canvasLocation" x="155.07246376811597" y="34.821428571428569"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ic_food" width="30" height="30"/>
+        <image name="ic_next" width="30" height="30"/>
+    </resources>
 </document>
